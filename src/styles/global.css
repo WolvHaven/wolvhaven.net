@@ -30,7 +30,7 @@
 	font-display: swap;
 }
 body {
-	font-family: 'ClarityCity', sans-serif;
+	font-family: 'Nunito Sans','ClarityCity', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -41,12 +41,6 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
 }
 h1,
 h2,
