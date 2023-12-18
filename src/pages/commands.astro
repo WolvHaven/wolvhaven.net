@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+    <h1>Commands</h1>
+    <p>This page contains information on the various commands and plugins in use in the server</p>
+
+    <h2>Plugin Information</h2>
+    <p>WolvHaven uses a variety of plugins to provide functionality within the server. You may click on any of these links for more information about any plugin and how to use it.</p>
+    <div class="flex flex-wrap">
+        <div class="w-1/2 p-2">
+            <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+                <h4>Traincarts</h4>
+                <p>The train plugin used on the server. Traincarts coasters is also used in WolvHaven City.</p>
+                <a href="https://wiki.traincarts.net/index.php/TrainCarts" target="_blank">Traincarts Wiki</a>
+            </div>
+        </div>
+        <div class="w-1/2 p-2">
+            <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+                <h4>Quickshop</h4>
+                <p>Used for player shops to sell or trade items for in-game currency.</p>
+                <a href="https://www.youtube.com/watch?v=kM9otG8BEx0" target="_blank">Video Tutorial</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>General Commands</h2>
+    <p>All server members have access to these commands</p>
+
+    <table class="table-auto">
+        <thead>
+            <th>Command</th>
+            <th>Description</th>
+        </thead>
+        <tr>
+            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">General Commands</td>
+        </tr>
+        <tr>
+            <td>/help</td>
+            <td>View list of available commands</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/afk</td>
+            <td>Marks you as away-from-keyboard</td>
+        </tr>
+        <tr>
+            <td>/back</td>
+            <td>Teleports you to your location prior to teleport/spawn/warp/death</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/gamemode &lt;gamemode&gt;</td>
+            <td>Change your gamemode (or /gmc for creative, /gms for survival, /gmsp for spectator)</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Economy Commands</td>
+          </tr>
+        <tr>
+            <td>/balance or /bal</td>
+            <td>States the current balance of a player</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/balancetop or /baltop</td>
+            <td>Gets the top balance values of eveyrone</td>
+        </tr>
+        <tr>
+            <td>/balancetop or /baltop</td>
+            <td>Gets the top balance values of eveyrone</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/pay</td>
+            <td>Send another player in-game money</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Transport &amp Teleport</td>
+        </tr>
+        <tr>
+            <td>/spawn</td>
+            <td>Teleport to spawn</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/tpa</td>
+            <td>Send a request to teleport to a player</td>
+        </tr>
+        <tr>
+            <td>/tpahere</td>
+            <td>Send a request to a player to you</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/tpaccept & /tpdeny</td>
+            <td>Accept or deny a teleport request</td>
+        </tr>
+        <tr>
+            <td>/sethome &lt;home_name&gt;</td>
+            <td>Sets home with home_name to current location</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/home &lt;home_name&gt;</td>
+            <td>Teleport to your home</td>
+        </tr>
+        <tr>
+            <td>/delhome &lt;home_name&gt;</td>
+            <td>Delete home of home_name</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Communication</td>
+        </tr>
+        <tr>
+            <td>/mail</td>
+            <td>Manage your in-game mail</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/msg & /tell</td>
+            <td>Send a private message the specified player</td>
+        </tr>
+        <tr>
+            <td>/me</td>
+            <td>Describes an action in the context of the player</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/ignore &lt;player&gt;</td>
+            <td>Ignore or unignore other players</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Quality of Life Commands</td>
+        </tr>
+        <tr>
+            <td>/clearinventory or /ci</td>
+            <td>Clear all items in your inventory</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/compass</td>
+            <td>Describes your current bearing</td>
+        </tr>
+        <tr>
+            <td>/ptime</td>
+            <td>Adjust player's client time</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/pweather</td>
+            <td>Adjust player's weather</td>
+        </tr>
+        <tr>
+            <td>/skull</td>
+            <td>Get a player's playerhead</td>
+        </tr>
+        <tr class="bg-gray-100">
+            <td>/seen</td>
+            <td>Shows the last logout time of a player</td>
+        </tr>
+
+    </table>
+
+</BaseLayout>
