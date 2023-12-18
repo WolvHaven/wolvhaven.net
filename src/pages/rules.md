@@ -15,8 +15,7 @@ While changes to the rules will be announced within our Discord server, it is ad
 </a>
 <br/><br/>
 
-### The most important principles
----
+## The most important principles
 1. Be respectful towards all members
 1. You are responsible for your own accounts
 1. Use common sense
