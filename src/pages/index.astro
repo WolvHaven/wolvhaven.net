@@ -3,21 +3,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-	<div class="flex flex-col justify-center bg-[url('/header.png')] bg-cover bg-center w-full rounded-lg">
-		<div class="px-16 py-24 backdrop-brightness-50 rounded-lg">
+	<div class="flex justify-center bg-[url('/page-content/home/header.png')] bg-cover bg-center w-full drop-shadow-2xl rounded-lg">
+		<div class="px-16 py-24 backdrop-brightness-50 w-full rounded-lg">
 			<div class="xl:w-3/5">
-				<h2 class="text-white font-bold p-2 max-w-fit bg-main-50">More to Explore.</h2>
+				<h1 class="text-white font-bold p-2 max-w-fit bg-main-50">More to Explore.</h1>
 				<p class="text-white">A Creative City-Building Minecraft server for the Architecture, Infrastructure, and Transit Enthusiast.</p>
 				<p class="text-white">IP – <span class="bg-main-50 p-1">play.wolvhaven.net</span></p>
 				<p class="text-white text-sm">Minecraft Version: 1.18.2 (as of December 2023)</p>
 			</div>
 		</div>
 	</div>
-	<div class="mt-5">
+	<div class="mt-10">
 		<h2>What is WolvHaven?</h2>
 		<p>WolvHaven is a creative city-building Minecraft server for the architecture, infrastructure, and transit enthusiast.</p>
 		<p>Established since 2011, WolvHaven was set up by SilverWolv to build a city in Minecraft with a functioning survival roleplay system, but has since evolved to become a Creative city building server focused on Architecture, Infrastructrue and Transit.</p>
 		<p>WolvHaven City acts as the showcase city of the server, and players may build their own towns and cities in the creative city building worlds of Gardellia or Calidia. A survival world is also available for players to have some classic Survival Multiplayer fun.</p>	
+	</div>
+	<div class="mt-10">
+		<h2>Our offered gamemodes</h2>
+		<div class="flex flex-col lg:flex-row gap-3">
+
+			<div class="bg-[url('/page-content/home/wh-city-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl">
+				<div class="px-5 py-10 w-full min-h-full backdrop-brightness-50 rounded-lg flex flex-col">
+					<div class="flex-1">
+						<h3 class="text-white">WolvHaven City</h3>
+						<p class="italic text-white">More to Explore</p>
+						<p class="text-white">The WolvHaven City project is the capital of the server, and acts as a showcase city.</p>
+					</div>
+					<a href="/wolvhaven" class="text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white">
+						Explore WolvHaven
+					</a>
+
+				</div>
+			</div>
+
+			<div class="bg-[url('/page-content/home/city-build-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl">
+				<div class="px-5 py-10 w-full min-h-full backdrop-brightness-50 rounded-lg flex flex-col">
+					<div class="flex-1">
+						<h3 class="text-white">Creative City-Build</h3>
+						<p class="italic text-white">Create to Captivate</p>
+						<p class="text-white">Build your own city and let your creativity run free. Create something to amaze the masses.</p>
+					</div>
+					<a href="/city-build" class="text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white">
+						Build your city
+					</a>
+				</div>
+			</div>
+
+			<div class="bg-[url('/page-content/home/survival-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl">
+				<div class="px-5 py-10 w-full min-h-full backdrop-brightness-30 rounded-lg flex flex-col">
+					<div class="flex-1">
+						<h3 class="text-white">Survival Multiplayer</h3>
+						<p class="italic text-white">Survive to Thrive</p>
+						<p class="text-white">Survive together with friends and start a community. Trade with others with our in-game currency.</p>
+					</div>
+					<a href="/survival" class="text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white">
+						Survive
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 
