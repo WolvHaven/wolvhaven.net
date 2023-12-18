@@ -1,9 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
@@ -16,7 +12,6 @@ const posts = (await getCollection('news')).sort(
 	<div class="flex flex-wrap">
 		{
 			posts.map((post) => (
-				
 				<div class="p-2 w-full lg:w-1/2">
 					<a href={`/news/${post.slug}/`}>
 						<div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
