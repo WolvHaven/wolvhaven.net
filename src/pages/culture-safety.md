@@ -2,6 +2,14 @@
 layout: ../layouts/BaseLayout.astro
 ---
 
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+
 # Community Culture & Safety
 
 Getting along with other server members and making friends will make your server experience better. Learn more about our community, culture, and what you can do to protect yourself.
