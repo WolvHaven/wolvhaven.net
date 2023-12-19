@@ -3,13 +3,13 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="p-5 bg-white m-0">
-	<nav class="flex flex-col flex-start p-1 gap-5">
+	<nav class="flex flex-col flex-start p-1">
 		<div class="flex flex-row justify-between">
 			<a href="/"><img class="max-w-xs" src="/WolvHavenLogo.png"/></a>
 			<a id="toggleNavBar" class="self-center"><img id="hamburgerIcon" class="lg:hidden w-5" src="bars-solid.svg"></a>
 		</div>
 			
-		<div id="navBarItems" class="hidden lg:block flex flex-col gap-5">
+		<div id="navBarItems" class="hidden lg:block flex flex-col flex-start mt-3 space-y-2">
 			<div class="flex flex-col flex-start gap-2">
 				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/">Home</HeaderLink>
 				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/news">News</HeaderLink>
