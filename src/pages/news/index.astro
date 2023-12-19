@@ -9,6 +9,7 @@ const posts = (await getCollection('news')).sort(
 ---
 
 <BaseLayout>
+	<h1>Latest News</h1>
 	<div class="flex flex-wrap">
 		{
 			posts.map((post) => (
