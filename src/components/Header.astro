@@ -4,26 +4,51 @@ import HeaderLink from './HeaderLink.astro';
 
 <header class="p-5 bg-white m-0">
 	<nav class="flex flex-col flex-start p-1 gap-5">
-		<a href="/"><img class="max-w-xs" src="/WolvHavenLogo.png"/></a>
-		<div class="flex flex-col flex-start gap-2">
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/">Home</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/news">News</HeaderLink>
+		<div class="flex flex-row justify-between">
+			<a href="/"><img class="max-w-xs" src="/WolvHavenLogo.png"/></a>
+			<a id="toggleNavBar" class="self-center"><img id="hamburgerIcon" class="lg:hidden w-5" src="bars-solid.svg"></a>
 		</div>
-		<div class="flex flex-col flex-start gap-2">
-			<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Gamemodes & Worlds</p>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/wolvhaven">WolvHaven City</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/city-build">Creative City-Build</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/survival">Survival Multiplayer</HeaderLink>
+			
+		<div id="navBarItems" class="hidden lg:block flex flex-col gap-5">
+			<div class="flex flex-col flex-start gap-2">
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/">Home</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/news">News</HeaderLink>
+			</div>
+			<div class="flex flex-col flex-start gap-2">
+				<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Gamemodes & Worlds</p>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/wolvhaven">WolvHaven City</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/city-build">Creative City-Build</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/survival">Survival Multiplayer</HeaderLink>
+			</div>
+			<div class="flex flex-col flex-start gap-2">
+				<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Information</p>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/rules">Server rules</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/ranks">Ranks</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/commands">Commands</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/forms">Application forms</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/culture-safety">Culture & safety</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/appeal">Appeal a penalty</HeaderLink>
+				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="http://play.wolvhaven.net:8123/" target="_blank">Dynmap</HeaderLink>
+			</div>
 		</div>
-		<div class="flex flex-col flex-start gap-2">
-			<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Information</p>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/rules">Server rules</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/ranks">Ranks</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/commands">Commands</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/forms">Application forms</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/culture-safety">Culture & safety</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/appeal">Appeal a penalty</HeaderLink>
-			<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="http://play.wolvhaven.net:8123/" target="_blank">Dynmap</HeaderLink>
-		</div>
+		
 	</nav>
 </header>
+
+<script>
+	const hamburgerBtn = document.getElementById("toggleNavBar")
+	const hamburgerIcon = document.getElementById("hamburgerIcon");
+	const menuItems = document.getElementById("navBarItems");
+
+	let navBarVisible = false;
+	hamburgerBtn.addEventListener("click", ()=> {
+		navBarVisible = !navBarVisible;
+		if(navBarVisible){
+			hamburgerIcon.src = "xmark-solid.svg"
+			menuItems?.classList.remove("hidden");
+		}else{
+			hamburgerIcon.src = "bars-solid.svg"
+			menuItems?.classList.add("hidden");
+		}
+	});
+</script>
