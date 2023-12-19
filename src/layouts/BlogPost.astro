@@ -11,7 +11,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <BaseLayout>
 	<article>
 		<div>
-			{heroImage && <img class="w-full rounded-lg shadow" src={heroImage} alt="" />}
+			{heroImage && <img class="w-full rounded-lg shadow border" src={heroImage} alt="" />}
 		</div>
 		<h1 class="mt-5">{title}</h1>
 		<FormattedDate date={pubDate} />
@@ -23,7 +23,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			)
 		}
 
-		<hr class="mb-10"/>
+		<hr class="mb-5"/>
 		<slot />
 	</article>
 	<!-- <article>
