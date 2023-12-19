@@ -4,237 +4,200 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout>
     <h1>Server Ranks</h1>
-    <p>This page describes the all the ranks that exist within the server and their requirements for obtaining these ranks.</p>
+    <p>This page describes the all the ranks that exist on the server and their requirements</p>
 
     <h2>Rank Structure Overview</h2>
     <p>Ranks in the server are split into 3 tracks:</p>
     <ul>
-        <li><span class="font-bold">General Ranks</span> – They are the basic ranks of the server.</li>
-        <li><span class="font-bold">Add-on Ranks</span> – They are the advanced ranks of the server, and may be applied for later.</li>
-        <li><span class="font-bold">Staff Ranks</span> – They are ranks held by members of staff</li>
+        <li><span class="font-bold">General Ranks</span> – basic ranks of the server</li>
+        <li><span class="font-bold">Add-on Ranks</span> – ranks that do not give any advantages in gameplay</li>
+        <li><span class="font-bold">Staff Ranks</span> – ranks held by members of staff</li>
     </ul>
-    <p>Every player will hold one of the General ranks, and may hold none or multiple Add-on Ranks.</p>
+    <p>Every player will hold one of the General ranks, and may hold one or multiple Add-on Ranks</p>
 
-    <table class="table-fixed">
-        <tbody>
-          <tr>
-            <th>Rank</th>
-            <th>Criteria to obtain rank</th>
-            <th>What they can do</th>
-          </tr>
-          <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">General Ranks</td>
-          </tr>
-          <!--VISITOR RANK-->
-          <tr class="bg-gray-100"> 
-            <td>
+    <h2>General ranks</h2>
+
+    <div class="flex flex-wrap">
+      <!-- VISITOR -->
+      <div class="w-full lg:w-1/2 p-2">
+          <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
               <span class="bg-gray-300 p-1">[Visitor]</span> 
-              <br/>The default rank assigned to all new members who join the server for the first time
-            </td>
-            <td>Join the server</td>
-            <td>
+              <p>The default rank assigned to all new members who join the server for the first time</p>
+              <p>Requirements:</p>
               <ul>
-                  <li>Visit and tour the different worlds of the server</li>
+                <li>Join the server</li>
               </ul>
-            </td>
-          </tr>
-          <!--PR RANK-->
-          <tr>
-            <td>
-              <span class="bg-gray-300 p-1">[PR]</span> <span class="italic">Permanent Resident</span>
-              <br/>The default rank assigned to all new members who join the server for the first time
-            </td>
-            <td>Pass the immigration test</td>
-            <td>
+              <p>They can:</p>
               <ul>
-                  <li>Access to general commands</li>
-                  <li>Build in the Creative city building/freebuild worlds</li>
-                  <li>Build in the Survival Multiplayer Worlds</li>
+                <li>Visit and tour the different worlds of the server</li>
               </ul>
-            </td>
-          </tr>
-          <!--CITIZEN RANK-->
-          <tr class="bg-gray-100">
-            <td>
-              <span class="bg-white p-1">[Citizen]</span>
-              <br/>New members who have joined and are establishing their presence on the server
-            </td>
-            <td>Pass the immigration test</td>
-            <td>
+          </div>
+      </div>
+
+      <!-- PERMANENT RESIDENT -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-gray-300 p-1">[PR]</span> <span class="italic">Permanent Resident</span>
+            <p>New members who have shown understanding of the server's rules and regulations</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>Pass the immigration test</li>
+            </ul>
+            <p>They can:</p>
+            <ul>
+              <li>Use general commands</li>
+              <li>Build in the Creative city building/freebuild worlds</li>
+              <li>Build in the Survival Multiplayer Worlds</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CITIZEN -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-white border p-1">[Citizen]</span>
+            <p>New members who have joined and are establishing their presence on the server</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>Apply for the rank after 7 days have passed since obtaining [PR]</li>
+              <li>No bans within the past 3 months</li>
+              <li>No active warnings within the past 3 months</li>
+            </ul>
+            <p>They can:</p>
+            <ul>
+              <li>Apply for the [Builder] rank</li>
+              <li>Vote in server elections and referendums</li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- BUILDER -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-yellow-400 p-1">[Builder]</span>
+            <p>Members with potential building skills and would like to contribute to the construction of WolvHaven City</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>Be ranked [Citizen]</li>
+              <li>Pass the WorldEdit Qualification Test</li>
+              <li>Submit an application</li>
+            </ul>
+            <p>They can:</p>
+            <ul>
+              <li>Contribute and build in WolvHaven City</li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- ARCHINEER -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-orange-400 p-1">[Architect]</span> &amp; <span class="bg-orange-400 p-1">[Engineer]</span> 
+            <p>Awarded to players with outstanding skills in the field of building, or redstone &amp; infrastructure</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>Be [Builder]</li>
+              <li>Have contributed to the WolvHaven city world</li>
+            </ul>
+            <p>They can:</p>
+            <ul>
+              <li>Contribute to planning for the official WolvHaven city</li>
+              <li>Mentor Builders</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2>Add-on Ranks</h2>
+
+    <div class="flex flex-wrap">
+      <!-- SUPPORTER -->
+      <div class="w-full lg:w-1/2 p-2">
+          <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+              <span class="bg-fuchsia-500 text-white p-1">[Supporter]</span> 
+              <p>Members who have contributed to the server's finances</p>
+              <p>Requirements:</p>
               <ul>
-                  <li>Apply for the rank after 7 days have passed since obtaining [PR]</li>
-                  <li>No bans within the past 3 months</li>
-                  <li>No active warnings within the past 3 months</li>
+                <li>Purchase the rank (sale temporarily suspended)</li>
               </ul>
-            </td>
-          </tr>
-          <!--BUILDER RANK-->
-          <tr>
-            <td>
-              <span class="bg-yellow-400 p-1">[Builder]</span>
-              <br/>Members with potential building skills and would like to contribute to the construction of WolvHaven City
-            </td>
-            <td>
+              <p>They can:</p>
               <ul>
-                  <li>Be ranked <span class="bg-white p-1">[Citizen]</span></li>
-                  <li>Pass the WorldEdit Qualification Test</li>
-                  <li>Submit an application</li>
+                <li>Use /nick</li>
+                <li>Use color codes in chat</li>
+                <li>Get a [S] suffix in rank</li>
               </ul>
-            </td>
-            <td>
-              <ul>
-                  <li>Contribute and build in WolvHaven City</li>
-              </ul>
-            </td>
-          </tr>
-          <!--ARCHINEER RANK-->
-          <tr class="bg-gray-100">
-            <td>
-              <span class="bg-orange-400 p-1">[Architect]</span> &amp; <span class="bg-orange-400 p-1">[Engineer]</span> 
-              <br/>Awarded to players with outstanding skills in the field of building, or redstone &amp; infrastructure.
-            </td>
-            <td>
-              <ul>
-                  <li>Be ranked [Citizen]</li>
-                  <li>Pass the WorldEdit Qualification Test</li>
-                  <li>Submit an application</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Contribute to planning for the official WolvHaven city</li>
-                <li>Mentor Builders</li>
-              </ul>
-            </td>
-          </tr>
-          <!-- ADDON RANKS -->
-          <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Add-on Ranks</td>
-          </tr>
-          <!-- DONOR -->
-          <tr>
-            <td>
-              <span class="bg-fuchsia-400 p-1">[Supporter]</span> 
-              <br/>Awarded to players with outstanding skills in the field of building, or redstone &amp; infrastructure.
-            </td>
-            <td>
-              <ul>
-                  <li>Purchase the supporter rank (sale temporarily suspended)</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Access to /nick</li>
-                <li>Color codes in chat</li>
-                <li>An [S] suffix in rank</li>
-              </ul>
-            </td>
-          </tr>
-          <!-- STAFF RANKS -->
-          <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Staff Ranks</td>
-          </tr>
-          <!-- HELPER -->
-          <tr class="bg-gray-100">
-            <td>
+          </div>
+      </div>
+    </div>
+
+    <h2>Staff Ranks</h2>
+
+    <div class="flex flex-wrap">
+      <!-- HELPER -->
+      <div class="w-full lg:w-1/2 p-2">
+          <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
               <span class="bg-indigo-300 p-1">[Helper]</span> 
-              <br/>Staff members who assist players with general inquiries, provide emergency response, and engage with the community while advising and reminding members of the rules.
-            </td>
-            <td>
-                <ul>
-                    <li>Good player track record</li>
-                    <li>Gets along well with the community</li>
-                    <li>Selected by SilverWolv or Admins</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Advise players of rule infractions</li>
-                    <li>Perform block checks & rollbacks</li>
-                    <li>Ban players in the event of an emergency on on-going offence</li>
-                    <li>Issue warnings
-                </ul>
-            </td>
-          </tr>
-          <!-- MODERATOR -->
-          <tr>
-            <td>
-              <span class="bg-green-500 p-1">[Mod]</span> <span class="italic">Moderator</span> 
-              <br/>Staff that moderate and maintain law & order and prosecute & charge individuals who breach server law.
-            </td>
-            <td>
+              <p>Staff members who assist players with general inquiries, provide emergency response, and engage with the community while advising and reminding members of the rules</p>
+              <p>Requirements:</p>
               <ul>
-                <li>3+ Months experience as a [Helper]</li>
-                <li>Ability to decide on appropriate penalties for rule infractions</li>
+                <li>Good player track record</li>
+                <li>Gets along well with the community</li>
                 <li>Selected by SilverWolv or Admins</li>
               </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Override decisions made by helpers</li>
-                <li>Primarily advise on penalties and punishments</li>
-              </ul>
-            </td>
-          </tr>
-          <!-- SR MOD -->
-          <tr class="bg-gray-100">
-            <td>
-              <span class="bg-green-600 p-1">[SrMod]</span> <span class="italic">Senior Moderator</span> 
-              <br/>Staff that moderate and maintain law & order and prosecute & charge individuals who breach server law.
-            </td>
-            <td>
-                <ul>
-                    <li>3+ Months experience as a [Mod]</li>
-                    <li>Ability to lead and take charge of situations</li>
-                    <li>Selected by SilverWolv or Admins</li>
-                </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Advise & Manage Moderators & Helpers</li>
-              </ul>
-            </td>
-          </tr>
-          <!-- ADMIN -->
-          <tr>
-            <td>
-              <span class="bg-red-500 text-white p-1">[Admin]</span> 
-              <br/>Administrators oversee the general operations of the server - technically and personally. Admins can handle most situations.
-            </td>
-            <td>
-                <ul>
-                    <li>3+ Months experience as a [SrMod]</li>
-                    <li>Selected by SilverWolv</li>
-                </ul>
-            </td>
-            <td>
-              <ul>
-                <li>(Mostly) Everything</li>
-              </ul>
-            </td>
-          </tr>
-          <!-- OWNER -->
-          <tr class="bg-gray-100">
-            <td>
-              <span class="bg-red-800 text-white p-1">[Owner]</span> 
-              <br/>The head honcho(s)
-            </td>
-            <td>
-                <ul>
-                    <li>Selected by SilverWolv</li>
-                </ul>
-            </td>
-            <td>
-              <ul>
-                <li>(Mostly) Everything</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          </div>
+      </div>
+
+      <!-- MODERATOR -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-green-300 p-1">[Mod]</span> <span class="italic">Moderator</span> 
+            <p>Staff that perform content moderation and penalise individuals who breach server rules</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>3+ Months experience as a [Helper]</li>
+              <li>Ability to decide on appropriate penalties for rule infractions</li>
+              <li>Selected by SilverWolv or Admins</li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- SR MOD -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-green-600 text-white p-1">[SrMod]</span> <span class="italic">Senior Moderator</span> 
+            <p>Same responsibilities as moderators but also manage, advise &amp; feedback on moderators & helpers under their watch</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>3+ Months experience as a [Mod]</li>
+              <li>Ability to lead and take charge of situations</li>
+              <li>Selected by SilverWolv or Admins</li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- ADMIN -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-red-500 text-white p-1">[Admin]</span> 
+            <p>Administrators oversee the general operations of the server</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>3+ Months experience as a [SrMod]</li>
+              <li>Selected by SilverWolv</li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- OWNER -->
+      <div class="w-full lg:w-1/2 p-2">
+        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <span class="bg-red-800 text-white p-1">[Owner]</span> 
+            <p>The head-honcho(s)</p>
+            <p>Requirements:</p>
+            <ul>
+              <li>Selected by SilverWolv</li>
+            </ul>
+        </div>
+      </div>
+  </div>
 </BaseLayout>
-<style>
-    td{
-        padding: 1em;
-    }
-</style>

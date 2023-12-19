@@ -9,6 +9,7 @@ All information pertaining to penalties, warnings & appeal processes can be foun
 ## Types of Penalties
 - **Verbal Warning** - A reminder that the act committed is against the rules.
 - **Official Warning** - An official record that stays with the player and remains active for 2 months from date of issue.Accumulation of 3 active warnings will result in a 1-week temp ban with an additional 1-week for every active warning above 3.
+- **Official Warning (Permanent)** - Similar to official warnings but stays active until appealed.
 - **Server Mute** - Removing the ability of a player to chat on the server.
 - **Monetary Fine** - A reduction of a player’s in-game economy balance.
 - **Confiscation of items &/or property**
