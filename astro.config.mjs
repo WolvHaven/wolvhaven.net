@@ -7,6 +7,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://wolvhaven.github.io',
-  base: '/wolvhaven.net'
+  base: '/wolvhaven.net',
   integrations: [mdx(), sitemap(), tailwind()]
 });
