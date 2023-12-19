@@ -6,7 +6,7 @@ import HeaderLink from './HeaderLink.astro';
 	<nav class="flex flex-col flex-start p-1">
 		<div class="flex flex-row justify-between">
 			<a href="/"><img class="max-w-xs" src="/WolvHavenLogo.png"/></a>
-			<a id="toggleNavBar" class="self-center"><img id="hamburgerIcon" class="lg:hidden w-5" src="bars-solid.svg"></a>
+			<a id="toggleNavBar" class="self-center"><img id="hamburgerIcon" class="lg:hidden w-5" src="/bars-solid.svg"></a>
 		</div>
 			
 		<div id="navBarItems" class="hidden lg:block flex flex-col flex-start mt-3 space-y-2">
@@ -44,10 +44,10 @@ import HeaderLink from './HeaderLink.astro';
 	hamburgerBtn.addEventListener("click", ()=> {
 		navBarVisible = !navBarVisible;
 		if(navBarVisible){
-			hamburgerIcon.src = "xmark-solid.svg"
+			hamburgerIcon.src = "/xmark-solid.svg"
 			menuItems?.classList.remove("hidden");
 		}else{
-			hamburgerIcon.src = "bars-solid.svg"
+			hamburgerIcon.src = "/bars-solid.svg"
 			menuItems?.classList.add("hidden");
 		}
 	});
