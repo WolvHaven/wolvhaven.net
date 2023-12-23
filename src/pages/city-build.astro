@@ -19,20 +19,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
     <div class="mt-10">
         <h2>Gardellia or Calidia?</h2>
-        <h3>Gardellia</h3>
-        <ul>
-            <li>Opened in 2016, Gardellia is WolvHaven's first city building world.</li>
-            <li>Built around a government-owned national railway network, players usually claim and build their cities around prebuilt stations.</li>
-            <li>The stations are spaced approximately 500m apart, and expansion may be limited due to neighboring claims along the rail line.</li>
-            <li class="font-bold">Choose Gardellia if you're starting out small</li>
-        </ul>
-        <h3>Calidia</h3>
-        <ul>
-            <li>Opened in 2020, Calidia is WolvHaven's newest city building world.</li>
-            <li>Unlike Gardellia, Calidia is a large-biome terrain generated world without any pre-built infrastructure.</li>
-            <li>Players usually space out and start their claims where space is available, away from other claims.</li>
-            <li>They are expected to collaborate and negotiate should they want to connect their claims using inter-city infrastructure.</li>
-            <li class="font-bold">Choose Calidia if you have bigger plans or ambitions</li>
-        </ul>
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-2">
+                <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <h3>Gardellia</h3>
+                    <p class="font-bold">For those starting out small</p>
+                    <ul>
+                        <li>Opened in 2016, Gardellia is WolvHaven's first city building world.</li>
+                        <li>Built around a government-owned national railway network, players usually claim and build their cities around prebuilt stations.</li>
+                        <li>Stations are spaced approximately 500m apart, and expansion may be limited due to neighboring claims along the rail line.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-2">
+                <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <h3>Calidia</h3>
+                    <p class="font-bold">For those with bigger plans or ambitions</p>
+                    <ul>
+                        <li>Opened in 2020, Calidia is WolvHaven's newest city building world.</li>
+                        <li>Unlike Gardellia, Calidia is a large-biome terrain generated world without any pre-built infrastructure.</li>
+                        <li>Players space out and start their claims where space is available, away from other claims.</li>
+                        <li>They are expected to collaborate and negotiate should they want to connect their claims using inter-city infrastructure.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+        
     </div>
 </BaseLayout>
