@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
+"introducing-town-hall.md": {
+	id: "introducing-town-hall.md";
+  slug: "introducing-town-hall";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 };
 
 	};
