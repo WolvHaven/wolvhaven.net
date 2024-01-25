@@ -23,8 +23,10 @@ The discussion covered several areas including:
 
 **The major points and findings from this town house are:**
 - There is little-to-no objection for the shift to creative; including the scrapping of survival entirely from the server
+- Expedited implementation of ImageFrame, as well as LiftsReloaded plugin
 - The server will explore methods of promotion, but also implores the community to help by creating and posting content from the server
 - Further refined definition of the Architect and Engineer Ranks
+- PR and Citizen will be merged, existing members without build access in Gardellia & Calidia (i.e. did not convert since 2021) will be demoted to Visitor
 
 ## Part 1: WolvHaven's Transition to a Creative Server
 
@@ -83,7 +85,9 @@ We asked if you had any concerns regarding the state of the community?
 ## Part 4(a): Redefining the Architect & Engineer Ranks, and Builder application process
 **Key Findings/Points**
 - Building blasts will be re-introduced; held less frequently once a month instead of every 2 weeks; with the added introduction of 3-month plans to facilitate guidance on contributions to 5H
-- Builder rank will be given to building blast attendees which satisfy the rank's requirement(s)
+- Builder rank will be given to building blast attendees which satisfy the rank's requirement(s) with accessibility to beginners in mind
+- Promotion to Architect/Engineer will be based on Endorsements from existing Architects/Engineers
+- Architect and Engineers should act as key planners, as well as mentors for builders
 - Architect has been defined to people who posess impressive building skills (buildings & infrastructure) with assessment based on:
     - Contributions to 5H for buildings
     - Contributions to infrastructure in 5H, or National-level infrastructure in Gardellia & Calidia
@@ -99,7 +103,7 @@ We asked if you had any concerns regarding the state of the community?
 - Supporter rank title will be made a suffix, existing supporters without Gardellia & Calidia build access will continue to have access to supporter benefits
 - SrMod will be scrapped and merged into Mod, and BargainBinAdmin will now still be BargainBinAdmin
 
-## Part 4(c): Calidia Road Netowkr Signage Details
+## Part 4(c): Calidia Road Network Signage Details
 **Key Findings/Points**
 - There was a lot of confusion regarding the purpose of this suggested topic, and has been deferred.
 
