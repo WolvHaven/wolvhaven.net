@@ -28,8 +28,6 @@ Criteria such as player inactivity, claim development, date of claiming have all
 
 ## List of Affected Claims
 
-**North West**
-
 **🚩 Rescinded / Abandoned Claims**
 
 North West
@@ -44,7 +42,7 @@ South East
 - Comrie City (CMRE) - claim already rescinded
 - @Bluedragonplayz2 Dragonhaven (BDDH)
 
-**⚠️ Notify `@CARD` on Discord if you wand to retain your claim**
+**⚠️ Notify `@CARD` on Discord if you want to retain your claim**
 
 North West
 - @DintyB Großheim (GRHM)
