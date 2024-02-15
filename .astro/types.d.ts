@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
+"calidia-cleanup-2024.md": {
+	id: "calidia-cleanup-2024.md";
+  slug: "calidia-cleanup-2024";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 "introducing-town-hall.md": {
 	id: "introducing-town-hall.md";
   slug: "introducing-town-hall";
