@@ -67,3 +67,5 @@ During the actual meeting, join in via voice chat or discuss in the respective f
 **Let us know your thoughts**
 
 Join in the discussion in the town hall proposal forum thread in the feedback-suggestions forum!
+
+*SilverWolv*

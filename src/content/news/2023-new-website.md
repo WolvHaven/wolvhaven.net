@@ -43,4 +43,4 @@ Some have also asked about purchasing Supporter rank or making financial contrib
 
 Thats all, thanks for sticking around during this difficult time.
 
-SilverWolv
+*SilverWolv*
