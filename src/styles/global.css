@@ -90,6 +90,9 @@ a {
 a:hover {
 	color: var(--accent);
 }
+.latest_news a {
+	color: white;
+}
 p {
 	margin-bottom: 1em;
 }
