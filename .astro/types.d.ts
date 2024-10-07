@@ -185,9 +185,30 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"news": {
-"2023-new-website.md": {
-	id: "2023-new-website.md";
-  slug: "2023-new-website";
+"2023-04-20-introducing-town-hall.md": {
+	id: "2023-04-20-introducing-town-hall.md";
+  slug: "2023-04-20-introducing-town-hall";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2023-12-20-2023-new-website.md": {
+	id: "2023-12-20-2023-new-website.md";
+  slug: "2023-12-20-2023-new-website";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2024-01-28-townhall-2024-01.md": {
+	id: "2024-01-28-townhall-2024-01.md";
+  slug: "2024-01-28-townhall-2024-01";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2024-02-15-calidia-cleanup-2024.md": {
+	id: "2024-02-15-calidia-cleanup-2024.md";
+  slug: "2024-02-15-calidia-cleanup-2024";
   body: string;
   collection: "news";
   data: InferEntrySchema<"news">
@@ -199,30 +220,9 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
-"calidia-cleanup-2024.md": {
-	id: "calidia-cleanup-2024.md";
-  slug: "calidia-cleanup-2024";
-  body: string;
-  collection: "news";
-  data: InferEntrySchema<"news">
-} & { render(): Render[".md"] };
-"introducing-town-hall.md": {
-	id: "introducing-town-hall.md";
-  slug: "introducing-town-hall";
-  body: string;
-  collection: "news";
-  data: InferEntrySchema<"news">
-} & { render(): Render[".md"] };
-"townhall-2024-01.md": {
-	id: "townhall-2024-01.md";
-  slug: "townhall-2024-01";
-  body: string;
-  collection: "news";
-  data: InferEntrySchema<"news">
-} & { render(): Render[".md"] };
-"townhall-2024-09.md": {
-	id: "townhall-2024-09.md";
-  slug: "townhall-2024-09";
+"2024-10-07-townhall-2024-09.md": {
+	id: "2024-10-07-townhall-2024-09.md";
+  slug: "2024-10-07-townhall-2024-09";
   body: string;
   collection: "news";
   data: InferEntrySchema<"news">
