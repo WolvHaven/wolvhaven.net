@@ -220,6 +220,13 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
+"townhall-2024-09.md": {
+	id: "townhall-2024-09.md";
+  slug: "townhall-2024-09";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 };
 
 	};

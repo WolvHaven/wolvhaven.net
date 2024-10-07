@@ -1,0 +1,98 @@
+---
+title: "Town Hall September 2024"
+description: "Gardellia's Future, and other community matters"
+pubDate: "2024-10-7"
+heroImage: "/common/WH-HouseOfReps.png"
+---
+
+Hello WolvHaveners, I know it's a bit delayed but we recently concluded our second town hall of the year, held on 28 September 2024. 
+
+While turnout was not as big as the first, I would still like to thank everyone who attended, and we managed to make the American Timezone session work!
+
+## From the previous TownHall...
+
+These were the outcomes from our previous town hall, as well as the resulting progress from it:
+
+- [x] Transition to a Creative-Focused Minecraft server, scrapping survival from the server
+- [x] Migration of server to France
+- [x] Expedited implementation of ImageFrame and LiftsReloaded plugin
+- [ ] Further refined definition of Architect & Engineer Ranks, as well as a one-time audit
+- [ ] Retiring of the PR rank, merging it with citizen
+- [x] Retiring of the SrMod rank, merging it with Mod
+- [ ] Updating server to 1.20
+- [ ] Expansion of Calidian World Borders
+
+You may view the previous townhall post [here](http://localhost:4321/news/townhall-2024-01/)
+
+## Upgrading the server, Gardellia's Future, and Calidian Expansion
+
+During the townhall, it was presented that despite estimates, there will likely be insufficient storage space on the server's machine to support Calidia's world expansion.
+
+One previously floated solution was to retire Gardellia and make use of the space from that to support Calidia's expansion. This was due to some reasons such as:
+
+- Under maintenance of Gardellia's Rail system
+- Most of the activity is now focused in Calidia
+- Concentration of community effort(s) into a single world
+
+However, in light of our investigations into storage space, retiring Gardellia will still be insufficient to support expansion of Calidia. 
+
+Minecraft's updates (sometimes) inflating the storage size of the existing world(s) also do not help in this regard. However, it appears that this time, the upgrade to 1.21 will result in an approximate decrease of 2.9% in storage space required.
+
+### The issue of space constraints
+
+To break it down, this is how much space will be needed. Note that estimates (denoted by `~` are provided by the [onlinemo.de/world](https://onlinemo.de/world) calculator)
+- Best case values are derived from current, real server data and applying a 2.9% reduction in space
+- Worst case values are taken from the calculator itself
+
+|World|Radius|Storage Now| Storage (1.21.1) | % Diff 
+|-|-|-|-|-|
+|Gardellia|10 km|16 GB|~17 GB<br/>~15.54 GB| +6.25%(worst case)<br/>-2.9% (best case)  
+|Calidia|15 km|27 GB|~38.15 GB<br/>~26.217 GB| +41.29% (worst case)<br/>-2.90% (best case)
+|Calidia<br/>(5km rad. exp.)|20 km|~69.86 GB|~67.83 GB| -2.90%
+|Calidia<br/>(3km rad. exp.)|18 km|~56.58 GB|~54.94 GB | -2.89%
+
+The trouble with proceeding with Calidia expansion is that we need to provision space within the server itself to setup a minimal test server for the testing of plugins etc. before updating again in the future, and also to provide some leeway for operations.
+
+### Migrating to Calidia
+
+We explored the possibility that Gardellia be retired, requiring players still active in the world to shift their claims over. We appreciate that such a decision may be hard to stomach for some, and are approaching this carefully.
+
+During the town hall discussions, we found that most members who were still active in Gardellia do not mind shifting over to Calidia.
+
+When asked how we can support, we have found that the following initiatives will help:
+- Temporary increase in the worldedit limit from ~30k to ~300k blocks
+- Ability to rename claim code(s)
+- Long transition period (at least 6m months)
+- A world download be made available
+
+### Decisions
+
+As of now, we are still investigating our options available. However, the following is confirmed:
+- The server will update to 1.21.1 when we are ready, skipping versions 1.19-20
+- Pause and hold off Calidia world expansion, pending further investigation
+- Investigation into Gardellia's future will be conducted, with recommendations to be made later on.
+
+## Architect & Engineer Review
+
+It was previously discussed that the [Architect] and [Engineer] ranks would be reviewed, and a one-time audit of existing members holding the rank would be on the table.
+
+Not much progress has been made so far, notably because we need to establish:
+- A decision-making framework
+- Necessary processes
+- New defintions, roles, and responsibilities for the rank
+
+I have delegated the task of the Archineer Review to minebuilder1223. This will allow us to focus on other technical requirements in the server.
+
+A decision is expected by December 2024.
+
+## Server Promotion & Community
+
+The topic of server promotion was brought up again. We re-iterated that server promotion cannot be solely undertaken by members of staff, and would require community support.
+
+You can support it by:
+- Recording, and uploading videos to youtube
+- Taking screenshots, which we can then use to repost on official social media platforms
+
+A point that the promotional material quality, as well as members' privacy (in uploading videos to their personal youtube channels) is a concern.
+
+To resolve that, we will setup a community youtube channel for everyone to submit videos to, but only if there are even videos to upload in the first place.
