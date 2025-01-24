@@ -185,6 +185,41 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"news": {
+"2021-04-05-new-wiki.md": {
+	id: "2021-04-05-new-wiki.md";
+  slug: "2021-04-05-new-wiki";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2021-06-14-changes-server-experience.md": {
+	id: "2021-06-14-changes-server-experience.md";
+  slug: "2021-06-14-changes-server-experience";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2021-06-21-new-rules.md": {
+	id: "2021-06-21-new-rules.md";
+  slug: "2021-06-21-new-rules";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2021-10-27-vision-2023.md": {
+	id: "2021-10-27-vision-2023.md";
+  slug: "2021-10-27-vision-2023";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2022-04-06-vision-2023-rank-structure.md": {
+	id: "2022-04-06-vision-2023-rank-structure.md";
+  slug: "2022-04-06-vision-2023-rank-structure";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 "2023-04-20-introducing-town-hall.md": {
 	id: "2023-04-20-introducing-town-hall.md";
   slug: "2023-04-20-introducing-town-hall";

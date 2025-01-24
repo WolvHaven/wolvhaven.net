@@ -1,6 +1,6 @@
 ---
 title: "Calidia Cleanup (Spring 2024)"
-description: "Inactive claims will be removed"
+description: "Inactive claims in Calidia will be removed"
 pubDate: "2024-02-15"
 heroImage: "/post-content/2024-calidia-cleanup-spring.png"
 ---
