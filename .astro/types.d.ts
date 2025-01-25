@@ -185,9 +185,114 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"news": {
+"2020-01-13-discord-qr-code.md": {
+	id: "2020-01-13-discord-qr-code.md";
+  slug: "2020-01-13-discord-qr-code";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-01-23-wher-year.md": {
+	id: "2020-01-23-wher-year.md";
+  slug: "2020-01-23-wher-year";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-03-11-citizen-app.md": {
+	id: "2020-03-11-citizen-app.md";
+  slug: "2020-03-11-citizen-app";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-03-26-elytra-race.md": {
+	id: "2020-03-26-elytra-race.md";
+  slug: "2020-03-26-elytra-race";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-05-03-113-upgrade.md": {
+	id: "2020-05-03-113-upgrade.md";
+  slug: "2020-05-03-113-upgrade";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-05-07-reddit.md": {
+	id: "2020-05-07-reddit.md";
+  slug: "2020-05-07-reddit";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-05-10-may-2020-ge.md": {
+	id: "2020-05-10-may-2020-ge.md";
+  slug: "2020-05-10-may-2020-ge";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-05-31-may-2020-ge-results.md": {
+	id: "2020-05-31-may-2020-ge-results.md";
+  slug: "2020-05-31-may-2020-ge-results";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-06-22-pride-2020.md": {
+	id: "2020-06-22-pride-2020.md";
+  slug: "2020-06-22-pride-2020";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-06-27-pride-2020-recap.md": {
+	id: "2020-06-27-pride-2020-recap.md";
+  slug: "2020-06-27-pride-2020-recap";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-08-05-server-leadership.md": {
+	id: "2020-08-05-server-leadership.md";
+  slug: "2020-08-05-server-leadership";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-10-14-political-system-changes.md": {
+	id: "2020-10-14-political-system-changes.md";
+  slug: "2020-10-14-political-system-changes";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-10-29-staff-changes-whistleblowing.md": {
+	id: "2020-10-29-staff-changes-whistleblowing.md";
+  slug: "2020-10-29-staff-changes-whistleblowing";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2020-11-08-representation-referendum.md": {
+	id: "2020-11-08-representation-referendum.md";
+  slug: "2020-11-08-representation-referendum";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 "2021-04-05-new-wiki.md": {
 	id: "2021-04-05-new-wiki.md";
   slug: "2021-04-05-new-wiki";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2021-06-03-new-wiki-register.md": {
+	id: "2021-06-03-new-wiki-register.md";
+  slug: "2021-06-03-new-wiki-register";
   body: string;
   collection: "news";
   data: InferEntrySchema<"news">
@@ -199,9 +304,23 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
+"2021-06-15-pride-2021.md": {
+	id: "2021-06-15-pride-2021.md";
+  slug: "2021-06-15-pride-2021";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 "2021-06-21-new-rules.md": {
 	id: "2021-06-21-new-rules.md";
   slug: "2021-06-21-new-rules";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2021-06-26-pride-2021-recap.md": {
+	id: "2021-06-26-pride-2021-recap.md";
+  slug: "2021-06-26-pride-2021-recap";
   body: string;
   collection: "news";
   data: InferEntrySchema<"news">
