@@ -165,6 +165,6 @@ When engaging another party regarding any concerns, be sure to keep the followin
 
 - **If the other party is unco-operative, disengage** - If the other party is not willing to cooperate, do not engage further. You may choose to exercise other options such as ignoring them through the /ignore command or blocking them on discord.
 
-You may also approach staff by opening a ticket, and let staff address your concerns on your behalf.
+You may also approach staff by opening a ticket in <span class="bg-indigo-300 p-1">#helpop</span>, and let staff address your concerns on your behalf.
 
 Should they continue to intentionally harass or try to cause harm, alert a member of staff immediately.
