@@ -1,0 +1,14 @@
+---
+title: "Officially launching our new spawn!"
+description: "WolvHaven has launched a new spawn as part of its transition towards a creative server for the Architecture, Infrastructure, and Transit Enthusiast"
+pubDate: "2025-02-01"
+heroImage: "/post-content/2025-new-spawn.png"
+---
+
+WolvHaven has launched a new spawn in New Wolfminster (5H) as part of its transition towards a creative server for the Architecture, Infrastructure, and Transit Enthusiast. Follow a new player as he arrives and ventures through a server with more to explore...
+
+[![Welcome to your new spawn — WolvHaven](/post-content/2025-new-spawn-video.png)](https://www.youtube.com/watch?v=nDJeqrg9MOA "Welcome to your new spawn — WolvHaven")
+
+*MatthieuTofu*
+
+*This article was created in February 2025 from YouTube content*

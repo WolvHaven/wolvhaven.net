@@ -381,6 +381,20 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
+"2025-01-01-trolligarch-documentary.md": {
+	id: "2025-01-01-trolligarch-documentary.md";
+  slug: "2025-01-01-trolligarch-documentary";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
+"2025-02-01-spawn-trailer.md": {
+	id: "2025-02-01-spawn-trailer.md";
+  slug: "2025-02-01-spawn-trailer";
+  body: string;
+  collection: "news";
+  data: InferEntrySchema<"news">
+} & { render(): Render[".md"] };
 };
 
 	};
