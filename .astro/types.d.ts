@@ -395,9 +395,9 @@ declare module 'astro:content' {
   collection: "news";
   data: InferEntrySchema<"news">
 } & { render(): Render[".md"] };
-"2025-03-12-1214-test-server.md": {
-	id: "2025-03-12-1214-test-server.md";
-  slug: "2025-03-12-1214-test-server";
+"2025-03-11-1214-test-server.md": {
+	id: "2025-03-11-1214-test-server.md";
+  slug: "2025-03-11-1214-test-server";
   body: string;
   collection: "news";
   data: InferEntrySchema<"news">
