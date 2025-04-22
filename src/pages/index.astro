@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SEO } from "astro-seo";
 ---
+
+<html lang="en">
+  <head>
+    <SEO
+      title="WolvHaven - A creative Minecraft server for the city-build and transit enthusiast"
+      description="Established since 2011, WolvHaven was set up by SilverWolv to build a city in Minecraft with a functioning survival roleplay system, but has since evolved to become a Creative city building server focused on Architecture, Infrastructrue and Transit."
+	  />
+</html>
 
 <BaseLayout>
 	<div class="flex justify-center bg-[url('/page-content/home/header.png')] bg-cover bg-center w-full drop-shadow-2xl rounded-lg">
