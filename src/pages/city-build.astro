@@ -2,22 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-	<div class="flex justify-center bg-[url('/page-content/city-build/odaki.png')] bg-cover bg-center w-full drop-shadow-2xl rounded-lg">
-		<div class="px-8 lg:px-16 py-12 lg:py-24 bg-black bg-opacity-50 w-full rounded-lg">
-			<div class="xl:w-3/5">
-                <h1 class="text-white font-bold max-w-fit">Gardellia &amp; Calidia</h1>
-                <p class="text-white"><span class="bg-main-50 p-1">Create to Captivate</span> — Creative city building worlds made for the seriously creative.</p>
-			</div>
-		</div>
-	</div>
-    <div class="mt-10">
+<BaseLayout headerImg="/page-content/city-build/odaki.png">
+	<div slot="pageHeader">
+        <h1 class="text-white font-bold max-w-fit">Gardellia &amp; Calidia</h1>
+        <p class="text-white"><span class="bg-main-50 p-1">Create to Captivate</span> — Creative city building worlds made for the seriously creative.</p>
+    </div>
+
+    <div>
         <h2>Creative City Build</h2>
         <p>
             <span class="text-white bg-main-50 p-1">Gardellia &amp; Calidia</span> are the two worlds in the server dedicated to creative city building. Players may claim areas and start building their own towns & cities regardless of their building skill level as long as they follow the rules.
         </p>
     </div>
-    <div class="mt-10">
+
+    <div>
         <h2>Gardellia or Calidia?</h2>
         <div class="flex flex-wrap">
             <div class="w-full lg:w-1/2 p-2">
@@ -46,18 +44,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
         </div>       
     </div>
-    <div class="mt-10">
+
+    <div>
         <h2>Claim Registration</h2>
-    <div class="w-full lg:w-full p-2">
-        <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-col">
-            <div class="flex-1">
-                <h4>City-Build Claim Registration</h4>
-                <p>As per the rules, all claims in Gardellia &amp; Calidia must be registered with Staff (CARD). You mau use this to register a new claim or de-register an existing claim.</p>
+        <div class="w-full lg:w-full p-2">
+            <div class="w-full min-h-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                <div class="flex-1">
+                    <h4>City-Build Claim Registration</h4>
+                    <p>As per the rules, all claims in Gardellia &amp; Calidia must be registered with Staff (CARD). You mau use this to register a new claim or de-register an existing claim.</p>
+                </div>
+                <a href="https://forms.gle/ayx4KPztfdFPk2UXA" target="_blank" class="text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50">
+                    Claim Registration Form
+                </a>
             </div>
-            <a href="https://forms.gle/ayx4KPztfdFPk2UXA" target="_blank" class="text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50">
-                Claim Registration Form
-            </a>
         </div>
-    </div>
     </div>
 </BaseLayout>
