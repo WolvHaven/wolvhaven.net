@@ -30,7 +30,7 @@ const mdToText = function(markdown) {
 							<a href={`/news/${post.slug}/`}><h3>{post.data.title}</h3></a>
 							<p><FormattedDate date={post.data.pubDate} /></p>
 							<p>{`${mdToText(post.body.substring(0, 250))}${post.body.length > 250 ? "..." : ""}`}</p>
-							<a href={`/news/${post.slug}/`}>&#8594; Read more</a>
+							<a href={`/news/${post.slug}/`}>&rdsh; Read more</a>
 						</div>
 					</div>
 				</div>
