@@ -8,7 +8,18 @@ type Props = CollectionEntry<'news'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout headerImg={heroImage} title={title} subtitle={"test"}>
+	<div slot="pageHeader" class="text-white">
+		<h1 class="text-white font-bold">{title}</h1>
+		<FormattedDate date={pubDate} />
+		{
+			updatedDate && (
+				<div>
+					Last updated on <FormattedDate date={updatedDate} />
+				</div>
+			)
+		}
+	</div>	
 	<article>
 		<div>
 			{heroImage && <img class="w-full rounded-lg shadow border" src={heroImage} alt="" />}
@@ -26,28 +37,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<hr class="mb-5"/>
 		<slot />
 	</article>
-	<!-- <article>
-		<div class="hero-image">
-			{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-		</div>
-		<div class="prose">
-			<div class="title">
-				<div class="date">
-					<FormattedDate date={pubDate} />
-					{
-						updatedDate && (
-							<div class="last-updated-on">
-								Last updated on <FormattedDate date={updatedDate} />
-							</div>
-						)
-					}
-				</div>
-				<h1>{title}</h1>
-				<hr />
-			</div>
-			<slot />
-		</div>
-	</article> -->
 </BaseLayout>
 
 
