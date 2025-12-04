@@ -1,10 +1,8 @@
 ---
 layout: ../layouts/BaseLayout.astro
+title: "WolvHaven Server Rules"
+subtitle: "All the rules and regulations governing the WolvHaven Server"
 ---
-
-# WolvHaven Server Rules
-
-This page contains all the information related to the rules and regulations governing the WolvHaven Server.
 
 As our rules and regulations evolve with our community's needs and requirements, all server rules and regulations are placed in this <a href="https://docs.google.com/document/d/19VFOn55_cTIcSmDWYTzYA-rvLrf0BFXXeCwevavKg5s/" target="_blank">Google Doc</a> for easy updating and reference. 
 

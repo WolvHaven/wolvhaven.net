@@ -1,23 +1,59 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const { headerImg, title, subtitle } = Astro.props.content ?? Astro.props;
+const layoverColor = headerImg ? "bg-black bg-opacity-50" : ""; //Only have layover color if header img present
+
+const hasPageHeaderContent = Astro.slots.has("pageHeader");
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<div class="flex lg:flex-row flex-col">
-			<Header title={SITE_TITLE} />
-			<main class="p-5 lg:p-10 w-full">
-				<slot/>
-			</main>
-		</div>
-		
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <div class="flex lg:flex-row flex-col flex-grow">
+      <Header title={SITE_TITLE} />
+
+      <div class="flex flex-col w-full relative">
+        <!-- Header Image -->
+        <div
+          style={headerImg
+            ? `background-image: url('${headerImg}')`
+            : "background-color: #7f0000"}
+          class="w-full min-h-64 bg-cover bg-center relative"
+        >
+          <!-- Overlay -->
+          <div class={`absolute inset-0 ${layoverColor}`}></div>
+
+          <!-- Page Header Content (Centered over background) -->
+          <div
+            class="relative z-20 h-full px-8 py-12 lg:py-24 max-w-screen-2xl mx-auto flex flex-col justify-center"
+          >
+            {hasPageHeaderContent && <slot name="pageHeader" />}
+            {
+              !hasPageHeaderContent && (
+                <>
+                  <h1 class="text-white font-bold">{title}</h1>
+                  <p class="text-white">{subtitle}</p>
+                </>
+              )
+            }
+          </div>
+        </div>
+
+        <!-- Main content with overlap -->
+        <div class="relative z-10 max-w-screen-2xl px-0 2xl:px-5 mx-auto">
+          <main class="p-8 bg-[#fafaf9] 2xl:rounded-t-lg 2xl:-mt-16">
+            <slot />
+          </main>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
 </html>

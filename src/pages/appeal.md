@@ -1,10 +1,8 @@
 ---
 layout: ../layouts/BaseLayout.astro
+title: "Appeals"
+subtitle: "All information pertaining to penalties, warnings & appeal processes can be found here"
 ---
-
-# Appeal a penalty
-
-All information pertaining to penalties, warnings & appeal processes can be found here.
 
 ## Types of Penalties
 - **Verbal Warning** - A reminder that the act committed is against the rules.

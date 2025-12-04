@@ -1,18 +1,16 @@
 ---
 layout: ../layouts/BaseLayout.astro
+title: "Community, Culture, and Safety"
+subtitle: "Getting along with other server members and making friends will make your server experience better. Learn more about our community, culture, and what you can do to protect yourself."
 ---
 
 <style>
     img {
-        max-width: 100%;
         height: auto;
         border-radius: 8px;
+        width: 100%;
     }
 </style>
-
-# Community Culture & Safety
-
-Getting along with other server members and making friends will make your server experience better. Learn more about our community, culture, and what you can do to protect yourself.
 
 ![It's OK to say and be told it's not OK](/page-content/culture-safety/oktonotok-banner.jpg)
 

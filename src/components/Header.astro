@@ -11,34 +11,34 @@ import HeaderLink from './HeaderLink.astro';
 			
 		<div id="navBarItems" class="hidden lg:block flex flex-col flex-start mt-3 space-y-2">
 			<div class="flex flex-col flex-start gap-2">
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/">Home</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/news">News</HeaderLink>
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/news">News</HeaderLink>
 			</div>
 			<div class="flex flex-col flex-start gap-2">
 				<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Gamemodes & Worlds</p>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/wolvhaven">WolvHaven City</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/city-build">Creative City-Build</HeaderLink>
+				<HeaderLink href="/wolvhaven">WolvHaven City</HeaderLink>
+				<HeaderLink href="/city-build">Creative City-Build</HeaderLink>
 			</div>
 			<div class="flex flex-col flex-start gap-2">
 				<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Information</p>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/rules">Server rules</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/ranks">Ranks</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/staff">Staff</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/commands">Commands &amp; Plugins</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/forms">Application forms</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/culture-safety">Culture & safety</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="/appeal">Appeal a penalty</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="http://play.wolvhaven.net:8123/" target="_blank">Dynmap</HeaderLink>
+				<HeaderLink href="/rules">Server rules</HeaderLink>
+				<HeaderLink  href="/ranks">Ranks</HeaderLink>
+				<HeaderLink href="/staff">Staff</HeaderLink>
+				<HeaderLink href="/commands">Commands &amp; Plugins</HeaderLink>
+				<HeaderLink href="/forms">Application forms</HeaderLink>
+				<HeaderLink href="/culture-safety">Culture & safety</HeaderLink>
+				<HeaderLink href="/appeal">Appeal a penalty</HeaderLink>
+				<HeaderLink external href="http://play.wolvhaven.net:8123/">Dynmap</HeaderLink>
 			</div>
 			<div class="flex flex-col flex-start gap-2">
 				<p class="uppercase tracking-widest text-sm text-gray-400 -mb-0.5">Socials</p>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.youtube.com/@WolvHaven">YouTube</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.instagram.com/wolvhaven/">Instagram</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.tiktok.com/@play.wolvhaven.net">TikTok</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://bsky.app/profile/wolvhaven.net">Bluesky</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.facebook.com/WolvHaven">Facebook</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.youtube.com/@WolvHavenCommunity">Community YouTube</HeaderLink>
-				<HeaderLink class="py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold" href="https://www.reddit.com/r/WolvHaven/">Reddit</HeaderLink>
+				<HeaderLink external href="https://www.youtube.com/@WolvHaven" >YouTube</HeaderLink>
+				<HeaderLink external href="https://www.instagram.com/wolvhaven/">Instagram</HeaderLink>
+				<HeaderLink external href="https://www.tiktok.com/@play.wolvhaven.net">TikTok</HeaderLink>
+				<HeaderLink external href="https://bsky.app/profile/wolvhaven.net">Bluesky</HeaderLink>
+				<HeaderLink external href="https://www.facebook.com/WolvHaven">Facebook</HeaderLink>
+				<HeaderLink external href="https://www.youtube.com/@WolvHavenCommunity">Community YouTube</HeaderLink>
+				<HeaderLink external href="https://www.reddit.com/r/WolvHaven/">Reddit</HeaderLink>
 			</div>
 		</div>
 		
@@ -47,11 +47,12 @@ import HeaderLink from './HeaderLink.astro';
 
 <script>
 	const hamburgerBtn = document.getElementById("toggleNavBar")
-	const hamburgerIcon = document.getElementById("hamburgerIcon");
+	const hamburgerIcon = document.getElementById("hamburgerIcon") as HTMLImageElement;
 	const menuItems = document.getElementById("navBarItems");
 
 	let navBarVisible = false;
-	hamburgerBtn.addEventListener("click", ()=> {
+
+	hamburgerBtn?.addEventListener("click", ()=> {
 		navBarVisible = !navBarVisible;
 		if(navBarVisible){
 			hamburgerIcon.src = "/xmark-solid.svg"

@@ -2,24 +2,23 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-	<div class="flex justify-center bg-[url('/page-content/wolvhaven(4h)/4h-skyline.png')] bg-cover bg-center w-full drop-shadow-2xl rounded-lg">
-		<div class="px-8 lg:px-16 py-12 lg:py-24 bg-black bg-opacity-50 w-full rounded-lg">
-			<div class="xl:w-3/5">
-                <h1 class="text-white font-bold max-w-fit">New WolvHaven City</h1>
-                <p class="text-white italic">4th Haven (4H), 2013—2023.</p>
-                <p class="text-white"><span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.</p>
-                <p class="text-white">New WolvHaven (4H) is the 4th edition of WolvHaven City, established in December 2013. It will be retired soon.</p>
-			</div>
-		</div>
-	</div>
-    <div class="mt-10">
+<BaseLayout headerImg="/page-content/wolvhaven(4h)/4h-skyline.png">
+    <div slot="pageHeader">
+        <h1 class="text-white font-bold max-w-fit">New WolvHaven City</h1>
+        <p class="text-white italic">4th Haven (4H), 2013&mdash;2023.</p>
+        <p class="text-white"><span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.</p>
+        <p class="text-white">New WolvHaven (4H) is the 4th edition of WolvHaven City, established in December 2013. It will be retired soon.</p>
+    </div>
+
+
+    <div>
         <h2>The server's (old) capital</h2>
         <p>
             <span class="text-white bg-main-50 p-1">New WolvHaven</span> was the capital of the server from 2013—2023. It has since been replaced by <a href="/wolvhaven">New Wolfminster (5H)</a> which is over 10x larger
         </p>
     </div>
-    <div class="mt-10">
+
+    <div>
         <h2>Why was 4H retired?</h2>
         <p>Announced in December 2013, 4H was meant to be the final iteration of the WolvHaven City project. However, in late 2015, problems soon started showing up with the current world due to the way it was designed. Several reasons were given such as:</p>
         <ul>
@@ -30,7 +29,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </ul>
         <p>It was decided in a Parliament session in December 2016 to add a mega fourth island to the existing map. However, after reviews, it was decided that WolvHaven City would move onto its 5th edition.</p>
     </div>
-    <div class="mt-10">
+
+    <div>
         <h2>Transport</h2>
         <p>The Metro network in 4H popularized WolvHaven and is the biggest reason why members joined.</p>
         
