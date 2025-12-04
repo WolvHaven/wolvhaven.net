@@ -52,16 +52,14 @@ import HeaderLink from './HeaderLink.astro';
 
 	let navBarVisible = false;
 
-	if(!hamburgerBtn || !hamburgerIcon || !menuItems) return;
-
-	hamburgerBtn.addEventListener("click", ()=> {
+	hamburgerBtn?.addEventListener("click", ()=> {
 		navBarVisible = !navBarVisible;
 		if(navBarVisible){
 			hamburgerIcon.src = "/xmark-solid.svg"
-			menuItems.classList.remove("hidden");
+			menuItems?.classList.remove("hidden");
 		}else{
 			hamburgerIcon.src = "/bars-solid.svg"
-			menuItems.classList.add("hidden");
+			menuItems?.classList.add("hidden");
 		}
 	});
 </script>
