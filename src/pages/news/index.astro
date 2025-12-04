@@ -27,7 +27,7 @@ const mdToText = function(markdown) {
 							</div>
 						</div>
 						<div class="w-full lg:w-2/3 px-0 lg:px-5 py-5">
-							<a href={`/news/${post.slug}/`}><h3>{post.data.title}</h3></a>
+							<a class="text-black" href={`/news/${post.slug}/`}><h3>{post.data.title}</h3></a>
 							<p><FormattedDate date={post.data.pubDate} /></p>
 							{
 								post.data.description && <p>{post.data.description}</p>
