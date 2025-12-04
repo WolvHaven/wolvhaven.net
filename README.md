@@ -105,6 +105,15 @@ showHeroInContent: true                                             # Default is
 ---
 ```
 
+### Images
+
+Place images in the `/public` directory
+- `/public/page-content` for images used in individual pages
+- `/public/post-content` for images used in news
+- `/public/common` for images expected to be used in multiple areas in the website (logos etc.)
+
+Please keep it organized. Create sub-folders if necessary and give images appropriate names.
+
 ### Commit Message
 
 When committing directly to the main branch, ensure your commit message follows the following format:
