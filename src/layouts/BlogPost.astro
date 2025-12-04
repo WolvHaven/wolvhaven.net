@@ -11,6 +11,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeroInContent =
 <BaseLayout headerImg={heroImage} title={title} subtitle={"test"}>
 	<div slot="pageHeader" class="text-white">
 		<h1 class="text-white font-bold">{title}</h1>
+		{description && <p>{description}</p>}
 		<FormattedDate date={pubDate} />
 		{
 			updatedDate && (

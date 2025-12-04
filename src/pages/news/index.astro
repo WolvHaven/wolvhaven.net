@@ -29,7 +29,12 @@ const mdToText = function(markdown) {
 						<div class="w-full lg:w-2/3 px-0 lg:px-5 py-5">
 							<a href={`/news/${post.slug}/`}><h3>{post.data.title}</h3></a>
 							<p><FormattedDate date={post.data.pubDate} /></p>
-							<p>{`${mdToText(post.body.substring(0, 250))}${post.body.length > 250 ? "..." : ""}`}</p>
+							{
+								post.data.description && <p>{post.data.description}</p>
+							}
+							{
+								!post.data.description && <p>{`${mdToText(post.body.substring(0, 250))}${post.body.length > 250 ? "..." : ""}`}</p>
+							}
 							<a href={`/news/${post.slug}/`}>&rdsh; Read more</a>
 						</div>
 					</div>
