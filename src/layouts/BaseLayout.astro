@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const { headerImg, title, subtitle } = Astro.props.content ?? Astro.props;
-const layoverColor = headerImg ? "bg-black opacity-50" : ""; //Only have layover color if header img present
+const layoverColor = headerImg ? "bg-black/50" : ""; //Only have layover color if header img present
 
 const hasPageHeaderContent = Astro.slots.has("pageHeader");
 ---

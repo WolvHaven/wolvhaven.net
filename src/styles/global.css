@@ -3,7 +3,7 @@
 @theme {
   --font-sans:
     Nunito Sans, ClaityCity, ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-main-50: #7f0000;
   --color-main-100: #690000;
@@ -23,7 +23,73 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-gray-200);
+  }
+
+  body{
+	@apply text-left bg-gray-50 wrap-break-word text-xl leading-[1.7]
+  }
+
+  a {
+    @apply text-main-50;
+  }
+  a:hover {
+    @apply text-main-100;
+  }
+
+  h1 {
+    @apply mb-2 text-4xl leading-[1.2];
+  }
+  h2 {
+    @apply mb-2 text-3xl leading-[1.2];
+  }
+  h3 {
+    @apply mb-2 text-2xl leading-[1.2];
+  }
+  h4 {
+    @apply mb-2 text-xl leading-[1.2];
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  code {
+    @apply p-1.5 bg-slate-300 rounded-xs;
+  }
+
+  strong,
+  b {
+    @apply font-bold;
+  }
+
+  blockquote {
+    @apply border-l-4 border-main-50 pl-5 m-0 text-lg;
+  }
+
+  ul {
+    @apply list-disc list-inside mb-2;
+  }
+  ol {
+    @apply list-decimal list-inside mb-2;
+  }
+  li {
+    @apply ml-2;
+  }
+
+  pre {
+    @apply p-6 rounded-lg whitespace-pre-wrap;
+  }
+  pre > code {
+    all: unset;
+  }
+
+  hr {
+    @apply border-t border-gray-200;
   }
 }
 
@@ -33,162 +99,46 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--accent: #7f0000;
-	--accent-dark: #690000;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
-@font-face {
-	font-family: 'ClarityCity';
-	src: url('/fonts/ClarityCity-Medium.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'ClarityCity';
-	src: url('/fonts/ClarityCity-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-body {
-	font-family: 'Nunito Sans','ClarityCity', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: #fafaf9;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 1.953em;
-}
-h2 {
-	font-size: 1.563em;
-}
-h3 {
-	font-size: 1.25em;
-}
-h4 {
-	font-size: 1.125em;
-}
-
-ul {
-	list-style-type: disc;
-	list-style-position: outside;
-	margin-bottom: 1em;
-}
-ol {
-	list-style-type: decimal;
-	list-style-position: outside;
-	margin-bottom: 1em;
-}
-li{
-	margin-left: 1em;;
-}
-
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-.latest_news a {
-	color: white;
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-/* img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
+/* :root {
+  --accent: #7f0000;
+  --accent-dark: #690000;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  --gray-dark: 34, 41, 57;
+  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
 } */
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+@font-face {
+  font-family: "ClarityCity";
+  src: url("/fonts/ClarityCity-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-	white-space: pre-wrap;
+@font-face {
+  font-family: "ClarityCity";
+  src: url("/fonts/ClarityCity-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
-}
+/* body {
+  font-family: "Nunito Sans", "ClarityCity", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: #fafaf9;
+  background-size: 100% 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: rgb(var(--gray-dark));
+  font-size: 20px;
+  line-height: 1.7;
+} */
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+.latest_news a {
+  color: white;
 }
