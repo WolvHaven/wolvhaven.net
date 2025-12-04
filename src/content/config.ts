@@ -9,7 +9,8 @@ const news = defineCollection({
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
+		heroImage: z.string().optional().default('/page-content/news/newsroom.png'),
+		showHeroInContent: z.boolean().optional().default(false)
 	}),
 });
 
