@@ -78,7 +78,7 @@
     @apply list-decimal list-outside mb-2;
   }
   li {
-    @apply ml-2;
+    @apply ml-7;
   }
 
   pre {
