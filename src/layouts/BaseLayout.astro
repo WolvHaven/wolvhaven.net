@@ -17,22 +17,24 @@ const hasPageHeaderContent = Astro.slots.has("pageHeader");
   </head>
   <body class="flex flex-col min-h-screen">
     <div class="flex lg:flex-row flex-col grow">
+      <!-- Menu Sidebar -->
       <Header title={SITE_TITLE} />
 
+      <!-- Page Content Layout -->
       <div class="flex flex-col w-full relative">
         <!-- Header Image -->
         <div
           style={headerImg
             ? `background-image: url('${headerImg}')`
             : "background-color: #7f0000"}
-          class="w-full min-h-64 bg-cover bg-center relative"
+          class="w-full xl:min-h-64 bg-cover bg-center relative"
         >
           <!-- Overlay -->
           <div class={`absolute inset-0 ${layoverColor}`}></div>
 
           <!-- Page Header Content (Centered over background) -->
           <div
-            class="relative z-20 h-full px-8 py-12 lg:py-24 max-w-(--breakpoint-2xl) mx-auto flex flex-col justify-center"
+            class="relative z-20 h-full px-10 py-12 lg:py-24 max-w-(--breakpoint-2xl) mx-auto flex flex-col justify-center xl:min-h-64"
           >
             {hasPageHeaderContent && <slot name="pageHeader" />}
             {
@@ -47,8 +49,8 @@ const hasPageHeaderContent = Astro.slots.has("pageHeader");
         </div>
 
         <!-- Main content with overlap -->
-        <div class="relative z-10 max-w-(--breakpoint-2xl) px-0 2xl:px-5 mx-auto">
-          <main class="p-8 bg-[#fafaf9] 2xl:rounded-t-lg 2xl:-mt-16">
+        <div class="relative z-10 max-w-(--breakpoint-2xl) px-0 xl:px-10 mx-auto">
+          <main class="p-8 bg-[#fafaf9] xl:rounded-t-lg xl:-mt-16">
             <slot />
           </main>
         </div>

@@ -27,7 +27,7 @@
   }
 
   body{
-	@apply text-left bg-gray-50 wrap-break-word text-xl leading-[1.7]
+	@apply text-left bg-gray-50 wrap-break-word text-lg lg:text-xl leading-[1.7]
   }
 
   a {
@@ -38,16 +38,16 @@
   }
 
   h1 {
-    @apply mb-2 text-4xl leading-[1.2];
+    @apply mb-2 text-3xl lg:text-4xl leading-[1.2];
   }
   h2 {
-    @apply mb-2 text-3xl leading-[1.2];
+    @apply mb-2 text-2xl lg:text-3xl leading-[1.2];
   }
   h3 {
-    @apply mb-2 text-2xl leading-[1.2];
+    @apply mb-2 text-xl lg:text-2xl leading-[1.2];
   }
   h4 {
-    @apply mb-2 text-xl leading-[1.2];
+    @apply mb-2 text-lg lg:text-xl leading-[1.2];
   }
 
   p {
