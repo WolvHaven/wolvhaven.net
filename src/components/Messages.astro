@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+
+type message = {
+  level: "info" | "warning" | "critical";
+  content: string | HTMLElement;
+  link?: string;
+  linkText?: string;
+  external?: boolean;
+};
+
+interface Props {
+  messages?: message[];
+}
+
+const levelClasses = {
+  info: {
+    icon: "fa7-solid:info-circle",
+    stripe: "striped-bg-blue",
+    bg: "bg-blue-200",
+    text: "text-blue-950",
+  },
+  warning: {
+    icon: "fa7-solid:exclamation-triangle",
+    stripe: "striped-bg-orange",
+    bg: "bg-orange-200",
+    text: "text-orange-950",
+  },
+  critical: {
+    icon: "fa7-solid:warning",
+    stripe: "striped-bg-red",
+    bg: "bg-red-200",
+    text: "text-red-950",
+  },
+};
+
+const { messages = [] } = Astro.props;
+---
+
+<div
+    id="carousel"
+  class="flex flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory gap-3"
+>
+  {
+    messages.map((msg) => (
+      <div
+        class={`grow-0 shrink-0 basis-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[msg.level].bg} ${levelClasses[msg.level].text}`}
+      >
+        <div class={`min-h-2.5 ${levelClasses[msg.level].stripe}`} />
+        <div class="flex flex-row p-5 gap-3">
+          <Icon name={levelClasses[msg.level].icon} class="text-4xl" />
+          <div class="text-wrap">{msg.content}</div>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+    const carousel = document.getElementById("carousel") as HTMLElement;
+    const items = Array.from(carousel.children) as HTMLElement[];
+    let index = 0;
+
+    const scrollNext = () => {
+        index = (index+1) % items.length;
+        const nextItem = items[index];
+
+        carousel.scrollTo({
+            left: nextItem.offsetLeft,
+            behavior: 'smooth'
+        })
+    }
+
+    setInterval(scrollNext, 2000);
+</script>

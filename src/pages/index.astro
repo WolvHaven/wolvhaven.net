@@ -1,4 +1,5 @@
 ---
+import Messages from '../components/Messages.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SEO } from "astro-seo";
 ---
@@ -30,6 +31,14 @@ import { SEO } from "astro-seo";
 			<li>Players may build their own towns and cities in the creative city building worlds of <a href="/city-build">Gardellia or Calidia</a></li>
 		</ul>
 	</section>
+
+	<div>
+		<Messages messages={[
+			{level: "info", content: "Test 1"},
+			{level: "warning", content: "Content 2 dsaa adsgadgad gdf g sdfb sd bfsd. sdf g sdf gsd fgsd gsd g fs bsf b sf bs fasdfas fasf adsf asd fasd f asdf as f as a dsv sad f as s adf sad f asd fgas dg sd g sd gsd. as f d f saf as f asddf das f as "},
+			{level: "critical", content: "Critical Message"}
+		]}/>
+	</div>
 
 	<div>
 		<p class="p-5 rounded-lg bg-main-100 border border-darkgray-100 mt-5 text-white">

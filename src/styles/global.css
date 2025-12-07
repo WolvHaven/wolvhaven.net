@@ -93,6 +93,41 @@
   }
 }
 
+@layer components{
+  .striped-bg-orange{
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-orange-200) 0 10px,
+      var(--color-orange-400) 10px 20px
+    );
+  }
+
+  .striped-bg-blue{
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-blue-200) 0 10px,
+      var(--color-blue-400) 10px 20px
+    );
+  }
+
+  .striped-bg-red{
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-red-200) 0 10px,
+      var(--color-red-400) 10px 20px
+    );
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 @font-face {
   font-family: "ClarityCity";
