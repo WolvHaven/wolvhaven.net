@@ -6,7 +6,7 @@ type message = {
   content: string | HTMLElement;
   link?: string;
   linkText?: string;
-  external?: boolean;
+  externalLink?: boolean;
 };
 
 interface Props {
@@ -53,20 +53,26 @@ const { messages = [] } = Astro.props;
           <p class="text-lg text-wrap">
             {msg.content}
             <br/>
-            {
-              msg.link &&
-              <a href={msg.link}>
-              {msg.linkText ?? "More info"}
-              <Icon
-                class="inline-block -mt-1"
-                name={
-                  msg.external
-                    ? "fa7-solid:external-link-alt"
-                    : "fa7-solid:arrow-right"
-                }
-              />
-            </a>
-            }
+            {msg.link && (
+              <a
+                class={`${levelClasses[msg.level].text} font-bold`}
+                target={msg.externalLink ? "_blank" : "_self"}
+                href={msg.link}
+              >
+                {msg.linkText ?? "More info"}
+                <Icon
+                  class="inline-block -mt-1"
+                  name={
+                    msg.externalLink
+                      ? "fa7-solid:external-link-alt"
+                      : "fa7-solid:arrow-right"
+                  }
+                />
+              </a>
+            )}
+          </p>
+          <p class="text-lg">
+            
           </p>
         </div>
       </div>
@@ -84,20 +90,23 @@ const { messages = [] } = Astro.props;
           <p class="text-lg text-wrap">
             {messages[0].content}
             <br/>
-            {
-              messages[0].link &&
-              <a href={messages[0].link}>
-              {messages[0].linkText ?? "More info"}
-              <Icon
-                class="inline-block -mt-1"
-                name={
-                  messages[0].external
-                    ? "fa7-solid:external-link-alt"
-                    : "fa7-solid:arrow-right"
-                }
-              />
-            </a>
-            }
+            {messages[0].link && (
+              <a
+                class={`${levelClasses[messages[0].level].text} font-bold`}
+                target={messages[0].externalLink ? "_blank" : "_self"}
+                href={messages[0].link}
+              >
+                {messages[0].linkText ?? "More info"}
+                <Icon
+                  class="inline-block -mt-1"
+                  name={
+                    messages[0].externalLink
+                      ? "fa7-solid:external-link-alt"
+                      : "fa7-solid:arrow-right"
+                  }
+                />
+              </a>
+            )}
           </p>
         </div>
       </div>
