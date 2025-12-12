@@ -26,8 +26,12 @@
     border-color: var(--color-gray-200);
   }
 
-  body{
-	@apply text-left bg-gray-50 wrap-break-word text-lg lg:text-xl leading-[1.7]
+  body {
+    @apply text-left bg-gray-50 wrap-break-word text-lg lg:text-xl leading-[1.7];
+  }
+
+  main {
+    @apply bg-gray-50;
   }
 
   a {
@@ -93,6 +97,41 @@
   }
 }
 
+@layer components {
+  .striped-bg-orange {
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-orange-100) 0 10px,
+      var(--color-orange-300) 10px 20px
+    );
+  }
+
+  .striped-bg-blue {
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-blue-100) 0 10px,
+      var(--color-blue-300) 10px 20px
+    );
+  }
+
+  .striped-bg-red {
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-red-100) 0 10px,
+      var(--color-red-300) 10px 20px
+    );
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 @font-face {
   font-family: "ClarityCity";

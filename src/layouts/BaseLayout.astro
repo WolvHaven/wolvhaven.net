@@ -49,8 +49,8 @@ const hasPageHeaderContent = Astro.slots.has("pageHeader");
         </div>
 
         <!-- Main content with overlap -->
-        <div class="relative z-10 max-w-(--breakpoint-2xl) px-0 xl:px-10 mx-auto">
-          <main class="p-8 bg-[#fafaf9] xl:rounded-t-lg xl:-mt-16">
+        <div class="relative z-10 max-w-full lg:max-w-(--breakpoint-2xl) px-0 xl:px-10 mx-auto">
+          <main class="p-8 xl:rounded-t-lg xl:-mt-16">
             <slot />
           </main>
         </div>
