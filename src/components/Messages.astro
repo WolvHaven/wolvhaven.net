@@ -17,19 +17,19 @@ const levelClasses = {
   info: {
     icon: "fa7-solid:info-circle",
     stripe: "striped-bg-blue",
-    bg: "bg-blue-200",
+    bg: "bg-blue-100",
     text: "text-blue-950",
   },
   warning: {
     icon: "fa7-solid:exclamation-triangle",
     stripe: "striped-bg-orange",
-    bg: "bg-orange-200",
+    bg: "bg-orange-100",
     text: "text-orange-950",
   },
   critical: {
     icon: "fa7-solid:warning",
     stripe: "striped-bg-red",
-    bg: "bg-red-200",
+    bg: "bg-red-100",
     text: "text-red-950",
   },
 };
@@ -38,38 +38,211 @@ const { messages = [] } = Astro.props;
 ---
 
 <div
-    id="carousel"
-  class="flex flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory gap-3"
+  id="carousel"
+  class="flex flex-row max-w-full overflow-x-scroll no-scrollbar snap-x snap-mandatory gap-3"
 >
+  <!-- Main Message Content -->
   {
     messages.map((msg) => (
       <div
-        class={`grow-0 shrink-0 basis-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[msg.level].bg} ${levelClasses[msg.level].text}`}
+        class={`grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[msg.level].bg} ${levelClasses[msg.level].text}`}
       >
         <div class={`min-h-2.5 ${levelClasses[msg.level].stripe}`} />
-        <div class="flex flex-row p-5 gap-3">
-          <Icon name={levelClasses[msg.level].icon} class="text-4xl" />
-          <div class="text-wrap">{msg.content}</div>
+        <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
+          <Icon name={levelClasses[msg.level].icon} class="text-4xl shrink-0" />
+          <p class="text-lg text-wrap">
+            {msg.content}
+            <br/>
+            {
+              msg.link &&
+              <a href={msg.link}>
+              {msg.linkText ?? "More info"}
+              <Icon
+                class="inline-block -mt-1"
+                name={
+                  msg.external
+                    ? "fa7-solid:external-link-alt"
+                    : "fa7-solid:arrow-right"
+                }
+              />
+            </a>
+            }
+          </p>
         </div>
       </div>
     ))
   }
+  <!-- Duplicated First Message for Smooth Scrolling Effect -->
+  {
+    messages.length > 1 && (
+      <div
+        class={`grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[messages[0].level].bg} ${levelClasses[messages[0].level].text}`}
+      >
+        <div class={`min-h-2.5 ${levelClasses[messages[0].level].stripe}`} />
+        <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
+          <Icon name={levelClasses[messages[0].level].icon} class="text-4xl" />
+          <p class="text-lg text-wrap">
+            {messages[0].content}
+            <br/>
+            {
+              messages[0].link &&
+              <a href={messages[0].link}>
+              {messages[0].linkText ?? "More info"}
+              <Icon
+                class="inline-block -mt-1"
+                name={
+                  messages[0].external
+                    ? "fa7-solid:external-link-alt"
+                    : "fa7-solid:arrow-right"
+                }
+              />
+            </a>
+            }
+          </p>
+        </div>
+      </div>
+    )
+  }
 </div>
 
 <script>
-    const carousel = document.getElementById("carousel") as HTMLElement;
-    const items = Array.from(carousel.children) as HTMLElement[];
-    let index = 0;
+  const carousel = document.getElementById("carousel") as HTMLElement;
+  // Convert HTMLCollection -> array for convenience
+  const slides = Array.from(carousel.children) as HTMLElement[];
+  const total = slides.length;
+  let index = 0;
+  const AUTO_MS = 5000;
+  const SCROLL_DURATION_MS = 400; // used when matching smooth scroll timing
 
-    const scrollNext = () => {
-        index = (index+1) % items.length;
-        const nextItem = items[index];
+  let intervalId: ReturnType<typeof setTimeout> | null = null;
+  let isPaused = false;
+  let isUserInteracting = false;
 
-        carousel.scrollTo({
-            left: nextItem.offsetLeft,
-            behavior: 'smooth'
-        })
+  // Compute exact scrollLeft target for a given slide using bounding rects
+  function computeTargetScrollLeftFor(slide) {
+    const containerRect = carousel.getBoundingClientRect();
+    const slideRect = slide.getBoundingClientRect();
+    // delta between slide left and container left in viewport coordinates
+    const delta = slideRect.left - containerRect.left;
+    // target scrollLeft = current scrollLeft + delta
+    return Math.round(carousel.scrollLeft + delta);
+  }
+
+  // Smooth scroll to a slide using scrollTo (keeps native smooth behavior)
+  function smoothScrollToSlide(slide) {
+    const target = computeTargetScrollLeftFor(slide);
+    carousel.scrollTo({ left: target, behavior: "smooth" });
+  }
+
+  // Instant jump to a slide without snap interference
+  function instantJumpToSlide(slide) {
+    // compute exact left and then set scrollLeft directly while snapping disabled
+    const target = computeTargetScrollLeftFor(slide);
+    disableSnap();
+    // Use direct assignment to scrollLeft to guarantee no interpolation
+    carousel.scrollLeft = target;
+
+    // Wait a couple frames to allow layout & snap reflow to settle, then re-enable snap
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        enableSnap();
+      });
+    });
+  }
+
+  function disableSnap() {
+    // set both inline style & preserve existing scroll-behavior
+    carousel.style.scrollSnapType = "none";
+  }
+
+  function enableSnap() {
+    carousel.style.scrollSnapType = ""; // restore to CSS value
+  }
+
+  function startAutoScroll() {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = setInterval(() => {
+      if (isPaused || isUserInteracting) return;
+      index++;
+      // scroll smoothly to next
+      const nextSlide = slides[index];
+      smoothScrollToSlide(nextSlide);
+
+      // If nextSlide is the cloned first (last index), schedule instant reset
+      if (index === total - 1) {
+        // Wait for smooth animation to complete then instantly jump to real first
+        setTimeout(() => {
+          index = 0;
+          instantJumpToSlide(slides[0]);
+        }, SCROLL_DURATION_MS);
+      }
+    }, AUTO_MS);
+  }
+
+  function stopAutoScroll() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
     }
+  }
 
-    setInterval(scrollNext, 2000);
+  // Pause on hover / focus
+  carousel.addEventListener("mouseenter", () => {
+    isPaused = true;
+  });
+  carousel.addEventListener("mouseleave", () => {
+    isPaused = false;
+  });
+  carousel.addEventListener("focusin", () => {
+    isPaused = true;
+  });
+  carousel.addEventListener("focusout", () => {
+    isPaused = false;
+  });
+
+  // Track manual scrolling so auto-scroll doesn't fight user interaction.
+  let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+  carousel.addEventListener("pointerdown", () => {
+    isUserInteracting = true;
+    stopAutoScroll();
+  });
+  window.addEventListener("pointerup", () => {
+    isUserInteracting = false;
+    // re-sync index after a short delay in case scroll inertia continues
+    setTimeout(syncIndexToClosestSlide, 100);
+    startAutoScroll();
+  });
+
+  // Keep index in sync with manual scroll (snap will move it to closest)
+  function syncIndexToClosestSlide() {
+    const scrollLeft = carousel.scrollLeft;
+    let closest = 0;
+    let closestDist = Infinity;
+    slides.forEach((s, i) => {
+      const target = computeTargetScrollLeftFor(s);
+      const dist = Math.abs(target - scrollLeft);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    });
+    index = closest;
+  }
+
+  // Throttle scroll events and update index
+  carousel.addEventListener(
+    "scroll",
+    () => {
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        syncIndexToClosestSlide();
+      }, 80);
+    },
+    { passive: true }
+  );
+
+  // Initialize: ensure first slide aligns exactly (in case initial CSS caused offset)
+  // Use instant jump at startup to align exactly then start auto-scroll
+  instantJumpToSlide(slides[0]);
+  startAutoScroll();
 </script>
