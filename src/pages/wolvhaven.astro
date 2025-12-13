@@ -1,4 +1,5 @@
 ---
+import Button from '../components/Button.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -7,13 +8,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h1 class="text-white font-bold max-w-fit">WolvHaven City</h1>
         <p class="text-white"><span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.</p>
         <p class="text-white">Established since 2011, the WolvHaven City project is the capital of the server, and acts as a showcase city.</p>
-        <div class="flex gap-2">
-            <a href="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg" target="_blank" class="text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white">
-                View the masterplan &nearr;
-            </a>
-            <a href="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/" target="_blank" class="text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white">
-                Latest detailed plan &nearr;
-            </a>
+        <div class="flex flex-col lg:flex-row gap-2">
+            <Button linkText="View the masterplan" link="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg" type="white" external/>
+            <Button linkText="Latest detailed plan" link="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/" type="white" external/>
         </div>
     </div>
 
@@ -51,28 +48,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
             </div>
             <div class="flex w-full lg:w-1/3 flex-wrap gap-2">
-                <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+                <div class="w-full card flex gap-5 self-start">
                     <img  class="w-1/5 self-start" src="/faces/minebuilder1223.png"/>
                     <div>
                         <h4>minebuilder1223</h4>
                         <p class="mb-0">Chief Planner, Capitol Island</p>
                     </div>
                 </div>
-                <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+                <div class="w-full card flex gap-5 self-start">
                     <img  class="w-1/5 self-start" src="/faces/silverwolv.png"/>
                     <div>
                         <h4>SilverWolv</h4>
                         <p class="mb-0">Wolfminster, Westford</p>
                     </div>
                 </div>
-                <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+                <div class="w-full card flex gap-5 self-start">
                     <img  class="w-1/5 self-start" src="/faces/matthieutofu.png"/>
                     <div>
                         <h4>MatthieuTofu</h4>
                         <p class="mb-0">Brookedge, Westford</p>
                     </div>
                 </div>
-                <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+                <div class="w-full card flex gap-5 self-start">
                     <img  class="w-1/5 self-start" src="/faces/heiopeii.png"/>
                     <div>
                         <h4>Heiopeii</h4>
@@ -101,21 +98,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <hr style="height:5pt; visibility:hidden;" />
         <h4>Metro</h4>
         <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+            <div class="w-full card flex gap-5 self-start">
                 <img  class="w-1/4 self-start" src="/page-content/wolvhaven/5h-T1.png"/>
                 <div>
                     <h4><b>Good Service</b></h4>
                     <p class="mb-0">Every 10 mins<br><i>All Stations</i></p>
                 </div>
             </div>
-            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+            <div class="w-full card flex gap-5 self-start">
                 <img  class="w-1/4 self-start" src="/page-content/wolvhaven/5h-T2.png"/>
                 <div>
                     <h4><b>Good Service</b></h4>
                     <p class="mb-0">Every 10 mins<br><i>All Stations</i></p>
                 </div>
             </div>
-            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+            <div class="w-full card flex gap-5 self-start">
                 <img  class="w-1/3 self-start" src="/page-content/wolvhaven/5h-T1-T2.png"/>
                 <div>
                     <h4><b>Good Service</b></h4>
@@ -125,14 +122,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <hr style="height:5pt; visibility:hidden;" />
         <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+            <div class="w-full card flex gap-5 self-start">
                 <img  class="w-1/4 self-start" src="/page-content/wolvhaven/5h-T3.png"/>
                 <div>
                     <h4><b>Good Service</b></h4>
                     <p class="mb-0">Every 5 mins<br><i>All Stations</i></p>
                 </div>
             </div>
-            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex gap-5 self-start">
+            <div class="w-full card flex gap-5 self-start">
                 <img  class="w-1/4 self-start" src="/page-content/wolvhaven/5h-T4.png"/>
                 <div>
                     <h4><b>Good Service</b></h4>

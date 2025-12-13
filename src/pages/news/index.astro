@@ -35,7 +35,7 @@ const mdToText = function(markdown) {
 							{
 								!post.data.description && <p>{`${mdToText(post.body.substring(0, 250))}${post.body.length > 250 ? "..." : ""}`}</p>
 							}
-							<a href={`/news/${post.slug}/`}>&rdsh; Read more</a>
+							<a href={`/news/${post.slug}/`}>Read more &rarr;</a>
 						</div>
 					</div>
 				</div>

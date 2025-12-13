@@ -54,6 +54,10 @@
     @apply mb-2 text-lg lg:text-xl leading-[1.2];
   }
 
+  section{
+    @apply mb-8;
+  }
+
   p {
     @apply mb-4;
   }
@@ -98,6 +102,18 @@
 }
 
 @layer components {
+  .btn-white-outline{
+    @apply text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white;
+  }
+
+  .btn-main-outline{
+    @apply text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50;
+  }
+
+  .card {
+    @apply  p-6 bg-white border border-gray-200 rounded-lg shadow-sm;
+  }
+
   .striped-bg-orange {
     background-image: repeating-linear-gradient(
       45deg,
