@@ -1,201 +1,203 @@
 ---
+import Button from '../components/Button.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Commands & Plugins" subtitle="Information on commands and plugins in use on the server">
-    <h2>Plugins</h2>
-    <p>WolvHaven uses a variety of plugins to provide functionality within the server. You may click on any of these links for more information about any plugin and how to use it.</p>
-    <div class="flex flex-wrap">
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Traincarts</h4>
+    <section>
+        <h2>Plugins</h2>
+        <p>WolvHaven uses a variety of plugins to provide functionality within the server. You may click on any of these links for more information about any plugin and how to use it.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
+            <div class="card flex flex-col">
+                <h3>Traincarts</h3>
                 <p>The train plugin used on the server. Traincarts coasters is also used in WolvHaven City.</p>
-                <a href="https://wiki.traincarts.net/index.php/TrainCarts" target="_blank">Traincarts Wiki</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://wiki.traincarts.net/index.php/TrainCarts" linkText="Traincarts Wiki" external/>
+                </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Quickshop</h4>
-                <p>Used for player shops to sell or trade items for in-game currency.</p>
-                <a href="https://github.com/PotatoCraft-Studio/QuickShop-Reremake/wiki/Getting-Started" target="_blank">Quickshop Wiki</a> | <a href="https://www.youtube.com/watch?v=kM9otG8BEx0" target="_blank">Video Tutorial</a>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>WorldEdit</h4>
+            <div class="card flex flex-col">
+                <h3>WorldEdit</h3>
                 <p>Allows users to copy/paste/rotate and quickly replace blocks in regions.</p>
-                <a href="https://worldedit.enginehub.org/en/latest/commands/" target="_blank">WorldEdit Wiki</a> | <a href="https://www.youtube.com/watch?v=SOOvommDpUA" target="_blank">Video Tutorial</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://worldedit.enginehub.org/en/latest/commands/" linkText="WorldEdit Wiki" external/>
+                    <Button link="https://www.youtube.com/watch?v=SOOvommDpUA" linkText="Video Tutorial" external/>
+                </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Armor Stand Tools (AST)</h4>
+            <div class="card flex flex-col">
+                <h3>Armor Stand Tools (AST)</h3>
                 <p>Create and customise armor stands.</p>
-                <a href="https://github.com/St3venAU/ArmorStandTools?tab=readme-ov-file#commands" target="_blank">AST Wiki</a> | <a href="https://youtu.be/KL1U-PAC9-U?si=iBA9-HLfHMaM4edQ&t=43" target="_blank">Video Tutorial</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://github.com/St3venAU/ArmorStandTools?tab=readme-ov-file#commands" linkText="AST Wiki" external/>
+                    <Button link="https://youtu.be/KL1U-PAC9-U?si=iBA9-HLfHMaM4edQ&t=43" linkText="Video Tutorial" external/>
+                </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Heads Database</h4>
+            <div class="card flex flex-col">
+                <h3>Heads Database</h3>
                 <p>Allows you to obtain custom player heads for decoration.</p>
                 <ul>
-                    <li>/headdb or /hdb or /heads to open menu</li>
-                    <li>/hdb search to search for heads</li>
+                    <li><code>/headdb</code> or <code>/hdb</code> or <code>/heads</code> to open menu</li>
+                    <li><code>/hdb search &lt;search_term&gt;</code> to search for heads</li>
                 </ul>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>ImageFrame</h4>
+            <div class="card flex flex-col">
+                <h3>ImageFrame</h3>
                 <p>Allows you to import custom images to display on maps.</p>
-                <a href="https://www.spigotmc.org/resources/106031/" target="_blank">ImageFrame Plugin Page</a> | <a href="https://www.youtube.com/watch?v=N0PnFbWPD1A" target="_blank">Video Tutorial</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://www.spigotmc.org/resources/106031/" linkText="Plugin Page" external/>
+                    <Button link="https://www.youtube.com/watch?v=N0PnFbWPD1A" linkText="Video Tutorial" external/>
+                </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>LiftsReloaded</h4>
+            <div class="card flex flex-col">
+                <h3>LiftsReloaded</h3>
                 <p>Allows you to create lifts in the server with smooth animations and different speeds, valid base blocks and speeds are iron block, copper ore, gold ore, diamond ore</p>
-                <a href="https://www.spigotmc.org/resources/97551/" target="_blank">LiftsReloaded Plugin Page</a> | <a href="https://www.youtube.com/watch?v=k-IT_ULndbE" target="_blank">Video Tutorial</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://www.spigotmc.org/resources/97551/" linkText="Plugin Page" external/>
+                    <Button link="https://www.youtube.com/watch?v=k-IT_ULndbE" linkText="Video Tutorial" external/>
+                </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>MyWarp</h4>
+            <div class="card flex flex-col">
+                <h3>MyWarp</h3>
                 <p>Allows you to create warps and warp signs for use on the server's creative worlds.</p>
-                <a href="https://github.com/MyWarp/MyWarp/wiki" target="_blank">MyWarp Plugin Page</a> | <a href="https://wolvhaven.net/news/2024-09-28-mywarp-introduction/" target="_blank">Tutorial for use in WolvHaven</a>
+                <div class="grow flex flex-col justify-end gap-2">
+                    <Button link="https://github.com/MyWarp/MyWarp/wiki" linkText="Plugin Wiki" external/>
+                    <Button link="https://wolvhaven.net/news/2024-09-28-mywarp-introduction/" linkText="Tutorial" external/>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <section>
+        <h2>General Commands</h2>
+        <p>All server members have access to these commands</p>
+
+        <table class="table-auto">
+            <thead>
+                <th>Command</th>
+                <th>Description</th>
+            </thead>
+            <tr>
+                <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">General Commands</td>
+            </tr>
+            <tr>
+                <td>/help</td>
+                <td>View list of available commands</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/afk</td>
+                <td>Marks you as away-from-keyboard</td>
+            </tr>
+            <tr>
+                <td>/back</td>
+                <td>Teleports you to your location prior to teleport/spawn/warp/death</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/gamemode &lt;gamemode&gt;</td>
+                <td>Change your gamemode (or /gmc for creative, /gms for survival, /gmsp for spectator)</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Economy Commands</td>
+            </tr>
+            <tr>
+                <td>/balance or /bal</td>
+                <td>States the current balance of a player</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/balancetop or /baltop</td>
+                <td>Gets the top balance values of eveyrone</td>
+            </tr>
+            <tr>
+                <td>/pay</td>
+                <td>Send another player in-game money</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Transport &amp Teleport</td>
+            </tr>
+            <tr>
+                <td>/spawn</td>
+                <td>Teleport to spawn</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/tpa</td>
+                <td>Send a request to teleport to a player</td>
+            </tr>
+            <tr>
+                <td>/tpahere</td>
+                <td>Send a request to a player to you</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/tpaccept & /tpdeny</td>
+                <td>Accept or deny a teleport request</td>
+            </tr>
+            <tr>
+                <td>/sethome &lt;home_name&gt;</td>
+                <td>Sets home with home_name to current location</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/home &lt;home_name&gt;</td>
+                <td>Teleport to your home</td>
+            </tr>
+            <tr>
+                <td>/delhome &lt;home_name&gt;</td>
+                <td>Delete home of home_name</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Communication</td>
+            </tr>
+            <tr>
+                <td>/mail</td>
+                <td>Manage your in-game mail</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/msg & /tell</td>
+                <td>Send a private message the specified player</td>
+            </tr>
+            <tr>
+                <td>/me</td>
+                <td>Describes an action in the context of the player</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/ignore &lt;player&gt;</td>
+                <td>Ignore or unignore other players</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Quality of Life Commands</td>
+            </tr>
+            <tr>
+                <td>/clearinventory or /ci</td>
+                <td>Clear all items in your inventory</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/if or /itemframe</td>
+                <td>Gives you a transparent item frame</td>
+            </tr>
+            <tr>
+                <td>/if --glow or <br> /itemframe --glow</td>
+                <td>Gives you a transparent glowing item frame</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/compass</td>
+                <td>Describes your current bearing</td>
+            </tr>
+            <tr>
+                <td>/ptime</td>
+                <td>Adjust player's client time</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/pweather</td>
+                <td>Adjust player's weather</td>
+            </tr>
+            <tr>
+                <td>/skull</td>
+                <td>Get a player's playerhead</td>
+            </tr>
+            <tr class="bg-gray-100">
+                <td>/seen</td>
+                <td>Shows the last logout time of a player</td>
+            </tr>
+
+        </table>
+    </section>
     
-    <h2>General Commands</h2>
-    <p>All server members have access to these commands</p>
-
-    <table class="table-auto">
-        <thead>
-            <th>Command</th>
-            <th>Description</th>
-        </thead>
-        <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">General Commands</td>
-        </tr>
-        <tr>
-            <td>/help</td>
-            <td>View list of available commands</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/afk</td>
-            <td>Marks you as away-from-keyboard</td>
-        </tr>
-        <tr>
-            <td>/back</td>
-            <td>Teleports you to your location prior to teleport/spawn/warp/death</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/gamemode &lt;gamemode&gt;</td>
-            <td>Change your gamemode (or /gmc for creative, /gms for survival, /gmsp for spectator)</td>
-        </tr>
-        <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Economy Commands</td>
-          </tr>
-        <tr>
-            <td>/balance or /bal</td>
-            <td>States the current balance of a player</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/balancetop or /baltop</td>
-            <td>Gets the top balance values of eveyrone</td>
-        </tr>
-        <tr>
-            <td>/pay</td>
-            <td>Send another player in-game money</td>
-        </tr>
-        <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Transport &amp Teleport</td>
-        </tr>
-        <tr>
-            <td>/spawn</td>
-            <td>Teleport to spawn</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/tpa</td>
-            <td>Send a request to teleport to a player</td>
-        </tr>
-        <tr>
-            <td>/tpahere</td>
-            <td>Send a request to a player to you</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/tpaccept & /tpdeny</td>
-            <td>Accept or deny a teleport request</td>
-        </tr>
-        <tr>
-            <td>/sethome &lt;home_name&gt;</td>
-            <td>Sets home with home_name to current location</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/home &lt;home_name&gt;</td>
-            <td>Teleport to your home</td>
-        </tr>
-        <tr>
-            <td>/delhome &lt;home_name&gt;</td>
-            <td>Delete home of home_name</td>
-        </tr>
-        <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Communication</td>
-        </tr>
-        <tr>
-            <td>/mail</td>
-            <td>Manage your in-game mail</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/msg & /tell</td>
-            <td>Send a private message the specified player</td>
-        </tr>
-        <tr>
-            <td>/me</td>
-            <td>Describes an action in the context of the player</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/ignore &lt;player&gt;</td>
-            <td>Ignore or unignore other players</td>
-        </tr>
-        <tr>
-            <td colspan="3" class="text-center uppercase tracking-widest bg-gray-500 text-white">Quality of Life Commands</td>
-        </tr>
-        <tr>
-            <td>/clearinventory or /ci</td>
-            <td>Clear all items in your inventory</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/if or /itemframe</td>
-            <td>Gives you a transparent item frame</td>
-        </tr>
-        <tr>
-            <td>/if --glow or <br> /itemframe --glow</td>
-            <td>Gives you a transparent glowing item frame</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/compass</td>
-            <td>Describes your current bearing</td>
-        </tr>
-        <tr>
-            <td>/ptime</td>
-            <td>Adjust player's client time</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/pweather</td>
-            <td>Adjust player's weather</td>
-        </tr>
-        <tr>
-            <td>/skull</td>
-            <td>Get a player's playerhead</td>
-        </tr>
-        <tr class="bg-gray-100">
-            <td>/seen</td>
-            <td>Shows the last logout time of a player</td>
-        </tr>
-
-    </table>
+    
 
 </BaseLayout>

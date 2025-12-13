@@ -1,19 +1,24 @@
 ---
 type Props = {
+  className?: string;
   link: string;
   linkText: string;
   type?: "main" | "white";
   external?: boolean;
 };
 
-const { link, linkText, type = "main", external = false } = Astro.props;
+const { link, linkText, type = "main", external = false, className = "" } = Astro.props;
 ---
 
 <a
   href={link}
   target={external ? "_blank" : "_self"}
-  class={`${type == "main" ? "btn-main-outline" : "btn-white-outline"} flex flex-row gap-1.5 justify-between`}
+  class:list={[
+    type == "main" ? "btn-main-outline" : "btn-white-outline",
+    'flex flex-row gap-1.5 justify-between',
+    className
+  ]}
 >
-    <span class="my-auto">{linkText}</span>
-    <span class="my-auto" set:html={external ? '&#8599;' : '&#8594;'} />
+  <span class="my-auto">{linkText}</span>
+  <span class="my-auto" set:html={external ? "&#8599;" : "&#8594;"} />
 </a>

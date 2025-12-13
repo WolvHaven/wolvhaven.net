@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout title="Server Rules" subtitle="All the rules and regulations governing the WolvHaven Server">
+    <section>
+        <h2>Check the rules regularly</h2>
+        <p>Our rules and regulations evolve to meet with our community's needs and requirements.</p>
+        <p>While changes to the rules are announced on the Discord server, it is advised to check on the latest version of the rules if unsure.</p>
+    </section>
+
+    <section>
+        <h2>The most important principles</h2>
+        <p>The core principles that define our rules are as follows:</p>
+
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-2">
+            <div class="card w-full">
+                <Icon class="text-4xl" name="fa7-solid:handshake"/>
+                <p>Be respectful towards all members</p>
+            </div>
+            <div class="card w-full">
+                <Icon class="text-4xl" name="fa7-solid:user-lock"/>
+                <p>You are responsible for your own accounts</p>
+            </div>
+            <div class="card w-full">
+                <Icon class="text-4xl" name="fa7-solid:hand-point-up"/>
+                <p>Use common sense</p>
+            </div>
+            <div class="card w-full">
+                <Icon class="text-4xl" name="fa7-solid:gavel"/>
+                <p>Staff have final say, but decisions may be appealed where appropriate</p>
+            </div>
+        </div>
+        <Button className="mt-5" link="https://docs.google.com/document/d/19VFOn55_cTIcSmDWYTzYA-rvLrf0BFXXeCwevavKg5s" linkText="View the rules document" external/>
+    </section>
+</BaseLayout>
