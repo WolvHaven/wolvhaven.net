@@ -1,168 +1,190 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Server Ranks" subtitle="All the ranks on the server and their requirements">
+<BaseLayout
+  title="Server Ranks"
+  subtitle="All the ranks on the server and their requirements"
+>
+  <section>
     <h2>Rank Structure Overview</h2>
     <p>Ranks in the server are split into 3 tracks:</p>
     <ul>
-        <li><span class="font-bold">General Ranks</span> – basic ranks of the server</li>
-        <li><span class="font-bold">Add-on Ranks</span> – ranks that do not give any advantages in gameplay</li>
-        <li><span class="font-bold">Staff Ranks</span> – ranks held by members of staff</li>
+      <li>
+        <span class="font-bold">General Ranks</span> &mdash; basic ranks of the server
+      </li>
+      <li>
+        <span class="font-bold">Add-on Ranks</span> &mdash; ranks that do not give
+        any advantages in gameplay
+      </li>
+      <li>
+        <span class="font-bold">Staff Ranks</span> &mdash; ranks held by members of
+        staff
+      </li>
     </ul>
-    <p>Every player will hold one of the General ranks, and may hold one or multiple Add-on Ranks</p>
+    <p>
+      Every player will hold one of the General ranks, and may hold one or
+      multiple Add-on Ranks
+    </p>
+  </section>
 
+  <section>
     <h2>General ranks</h2>
-
-    <div class="flex flex-wrap">
-      <!-- VISITOR -->
-      <div class="w-full lg:w-1/2 p-2">
-          <div class="w-full min-h-full card">
-              <span class="bg-gray-300 p-1">[Visitor]</span> 
-              <p>The default rank assigned to all new members who join the server for the first time</p>
-              <p>Requirements:</p>
-              <ul>
-                <li>Join the server</li>
-              </ul>
-              <p>They can:</p>
-              <ul>
-                <li>Visit and tour the different worlds of the server</li>
-              </ul>
-          </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <!-- Visitor -->
+      <div class="card">
+        <span class="bg-gray-300 p-1">[Visitor]</span>
+        <p>
+          The default rank assigned to all new members who join the server for
+          the first time
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Join the server</li>
+        </ul>
+        <p>They can:</p>
+        <ul>
+          <li>Visit and tour the different worlds of the server</li>
+        </ul>
       </div>
-
-      <!-- CITIZEN -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-white border p-1">[Citizen]</span>
-            <p>Members who have joined and are establishing their presence on the server</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>Pass the immigration test</li>
-            </ul>
-            <p>They can:</p>
-            <ul>
-              <li>Use general commands</li>
-              <li>Build in Calidia, Gardellia & the Laboratory world</li>
-              <li>Apply for the [Builder] rank</li>
-            </ul>
-        </div>
+      <!-- Citizen -->
+      <div class="card">
+        <span class="bg-white border p-1">[Citizen]</span>
+        <p>
+          Members who have joined and are establishing their presence on the
+          server
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Pass the immigration test</li>
+        </ul>
+        <p>They can:</p>
+        <ul>
+          <li>Use general commands</li>
+          <li>Build in Calidia, Gardellia & the Laboratory world</li>
+          <li>Apply for the [Builder] rank</li>
+        </ul>
       </div>
-
-      <!-- BUILDER -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-yellow-400 p-1">[Builder]</span>
-            <p>Members with potential building skills and would like to contribute to the construction of WolvHaven City</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>Be ranked [Citizen]</li>
-              <li>Pass the WorldEdit Qualification Test</li>
-              <li>Submit an application (coming soon)</li>
-            </ul>
-            <p>They can:</p>
-            <ul>
-              <li>Contribute and build in WolvHaven City</li>
-            </ul>
-        </div>
+      <!-- Builder -->
+      <div class="card">
+        <span class="bg-yellow-400 p-1">[Builder]</span>
+        <p>
+          Members with potential building skills and would like to contribute to
+          the construction of WolvHaven City
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Be ranked [Citizen]</li>
+          <li>Pass the WorldEdit Qualification Test</li>
+          <li>Submit an application (coming soon)</li>
+        </ul>
+        <p>They can:</p>
+        <ul>
+          <li>Contribute and build in WolvHaven City</li>
+        </ul>
       </div>
-
-      <!-- ARCHINEER -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-orange-400 p-1">[Architect]</span> &amp; <span class="bg-orange-400 p-1">[Engineer]</span> 
-            <p>Awarded to players with outstanding skills in the field of building, or redstone &amp; infrastructure</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>Be [Builder]</li>
-              <li>Have contributed to the WolvHaven city world</li>
-            </ul>
-            <p>They can:</p>
-            <ul>
-              <li>Contribute to planning for the official WolvHaven city</li>
-              <li>Mentor Builders</li>
-            </ul>
-        </div>
+      <!-- Architect & Engineer -->
+      <div class="card">
+        <span class="bg-orange-400 text-wh p-1">[Architect]</span> &amp; <span
+          class="bg-orange-400 p-1">[Engineer]</span
+        >
+        <p>
+          Awarded to players with outstanding skills in the field of building,
+          or redstone &amp; infrastructure
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Be [Builder]</li>
+          <li>Have contributed to the WolvHaven city world</li>
+        </ul>
+        <p>They can:</p>
+        <ul>
+          <li>Contribute to planning for the official WolvHaven city</li>
+          <li>Mentor Builders</li>
+        </ul>
       </div>
     </div>
-    <hr style="height:15pt; visibility:hidden;" />
+  </section>
 
+  <section>
     <h2>Add-on Ranks</h2>
-
-    <div class="flex flex-wrap">
-      <!-- SUPPORTER -->
-      <div class="w-full lg:w-1/2 p-2">
-          <div class="w-full min-h-full card">
-              <span class="bg-fuchsia-500 text-white p-1">[Supporter]</span> 
-              <p>Members who have contributed to the server's finances</p>
-              <p>Requirements:</p>
-              <ul>
-                <li>Purchase the rank (sale temporarily suspended)</li>
-              </ul>
-              <p>They can:</p>
-              <ul>
-                <li>Use /nick</li>
-                <li>Use color codes in chat</li>
-                <li>Get a [S] suffix in rank</li>
-              </ul>
-          </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <!-- Supporter -->
+      <div class="card">
+        <span class="bg-fuchsia-500 text-white p-1">[Supporter]</span>
+        <p>Members who have contributed to the server's finances</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Purchase the rank (sale temporarily suspended)</li>
+        </ul>
+        <p>They can:</p>
+        <ul>
+          <li>Use /nick</li>
+          <li>Use color codes in chat</li>
+          <li>Get a [S] suffix in rank</li>
+        </ul>
       </div>
     </div>
-    <hr style="height:15pt; visibility:hidden;" />
+  </section>
 
+  <section>
     <h2>Staff Ranks</h2>
-    <a href="/staff" target="_blank">Click here </a>for more information on server staff.
-    <div class="flex flex-wrap">
-      <!-- HELPER -->
-      <div class="w-full lg:w-1/2 p-2">
-          <div class="w-full min-h-full card">
-              <span class="bg-indigo-300 p-1">[Helper]</span> 
-              <p>Staff members who assist players with general inquiries, provide emergency response, and engage with the community while advising and reminding members of the rules</p>
-              <p>Requirements:</p>
-              <ul>
-                <li>Good player track record</li>
-                <li>Gets along well with the community</li>
-                <li>Selected by SilverWolv or Admins</li>
-              </ul>
-          </div>
+    <p>
+      <a href="/staff" target="_blank">Click here </a>for more information on
+      server staff.
+    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <!-- Helper -->
+      <div class="card">
+        <span class="bg-indigo-300 p-1">[Helper]</span>
+        <p>
+          Staff members who assist players with general inquiries, provide
+          emergency response, and engage with the community while advising and
+          reminding members of the rules
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Good player track record</li>
+          <li>Gets along well with the community</li>
+          <li>Selected by SilverWolv or Admins</li>
+        </ul>
       </div>
-
-      <!-- MODERATOR -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-green-300 p-1">[Mod]</span> <span class="italic">Moderator</span> 
-            <p>Staff that perform content moderation and penalise individuals who breach server rules</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>3+ months experience as a [Helper]</li>
-              <li>Ability to decide on appropriate penalties for rule infractions</li>
-              <li>Selected by SilverWolv or Admins</li>
-            </ul>
-        </div>
+      <!-- Moderator -->
+      <div class="card">
+        <span class="bg-green-300 p-1">[Mod]</span>
+        <span class="italic">Moderator</span>
+        <p>
+          Staff that perform content moderation and penalise individuals who
+          breach server rules
+        </p>
+        <p>Requirements:</p>
+        <ul>
+          <li>3+ months experience as a [Helper]</li>
+          <li>
+            Ability to decide on appropriate penalties for rule infractions
+          </li>
+          <li>Selected by SilverWolv or Admins</li>
+        </ul>
       </div>
-
-      <!-- ADMIN -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-red-500 text-white p-1">[Admin]</span> 
-            <p>Administrators oversee the general operations of the server</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>Selected by SilverWolv</li>
-            </ul>
-        </div>
+      <!-- Admin -->
+      <div class="card">
+        <span class="bg-red-500 text-white p-1">[Admin]</span>
+        <p>Administrators oversee the general operations of the server</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Possess technical knowledge about server's plugins etc.</li>
+          <li>Selected by SilverWolv</li>
+        </ul>
       </div>
-
-      <!-- OWNER -->
-      <div class="w-full lg:w-1/2 p-2">
-        <div class="w-full min-h-full card">
-            <span class="bg-red-800 text-white p-1">[Owner]</span> 
-            <p>The head-honcho(s)</p>
-            <p>Requirements:</p>
-            <ul>
-              <li>Selected by SilverWolv</li>
-            </ul>
-        </div>
+      <!-- Owner -->
+      <div class="card">
+        <span class="bg-red-800 text-white p-1">[Owner]</span>
+        <p>The head-honcho(s)</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Selected by SilverWolv</li>
+        </ul>
       </div>
-  </div>
+    </div>
+  </section>
 </BaseLayout>

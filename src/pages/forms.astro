@@ -1,43 +1,73 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Application Forms" subtitle="All links to application forms on the server">
-    <div class="flex flex-wrap">
-        <div class="w-full lg:w-1/2 p-2">
-            <div class="w-full min-h-full card flex flex-col">
-                <div class="flex-1">
-                    <h4>WorldEdit Qualification</h4>
-                    <p>Apply for WorldEdit Qualification. Passing this test grants you access to basic WorldEdit commands in the city-building worlds and is a prerequisite for the [Builder] rank.</p>
-                </div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfznXp97pusYFcsEGfQww2Ozry-dcgYFwyz0eqveXW-Dj6GgQ/viewform" target="_blank" class="text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50">
-                    WorldEdit Qualification Test
-                </a>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/2 p-2">
-            <div class="w-full min-h-full card flex flex-col">
-                <div class="flex-1">
-                    <h4>City-Build Claim Registration</h4>
-                    <p>As per the rules, all claims in Gardellia &amp; Calidia must be registered with Staff (CARD). You mau use this to register a new claim or de-register an existing claim.</p>
-                </div>
-                <a href="https://forms.gle/ayx4KPztfdFPk2UXA" target="_blank" class="text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50">
-                    Claim Registration Form
-                </a>
-            </div>
-        </div>
+<BaseLayout
+  title="Application Forms"
+  subtitle="All links to application forms on the server"
+>
+  <section>
+    <h2>Qualification-related Forms</h2>
+    <div class="grid grid-cols-1 gap-3">
+      <div class="card w-full">
+        <h3>WorldEdit Qualification</h3>
+        <p>Passing this assessment grants you:</p>
+        <ul>
+          <li>
+            Access to basic WorldEdit commands in the city-building worlds
+          </li>
+          <li>Fulfilled pre-requisite for the [Builder] rank</li>
+        </ul>
+        <Button
+          link="https://docs.google.com/forms/d/e/1FAIpQLSfznXp97pusYFcsEGfQww2Ozry-dcgYFwyz0eqveXW-Dj6GgQ/viewform"
+          linkText="WorldEdit Qualification Test"
+          external
+        />
+      </div>
     </div>
-    <div class="w-full p-2">
-        <div class="w-full min-h-full card flex flex-col">
-            <div class="flex-1">
-                <h4>Whistleblow an Incident</h4>
-                <p>You should submit a whistleblowing report only if you believe submitting a report directly to staff or revealing your identity puts yourself at risk. Otherwise, please submit a report by opening a ticket using #helpop via discord.</p>
-                <p>All reports will be treated with strict confidentiality. You should provide as much information as possible in the fields below to facilitate our investigation.</p>
-                <p>WolvHaven is committed to protecting all individuals who submit reports in good faith against any form of retaliation and victimization.</p>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3kWnln91iNAplSiPtIB6YYziFq6y_kLuvBFhsCObcrNhKMQ/viewform?usp=sf_link" target="_blank" class="text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50">
-                Submit a report
-            </a>
-        </div>
+  </section>
+
+  <section>
+    <h2>Administrative-related Forms</h2>
+    <div class="grid grid-cols-1 gap-3">
+      <div class="card w-full">
+        <h3>City-Build Claim Registration</h3>
+        <p>
+          All claims in Gardellia &amp; Calidia must be registered for
+          administrative purposes. Use this form to:
+        </p>
+        <ul>
+          <li>Register a new claim</li>
+          <li>De-register or Relinquish ownership of your existing claim</li>
+        </ul>
+        <Button
+          link="https://forms.gle/ayx4KPztfdFPk2UXA"
+          linkText="Claim Registration Form"
+          external
+        />
+      </div>
     </div>
+  </section>
+
+  <section>
+    <h2>Moderation-related Forms</h2>
+    <div class="grid grid-cols-1 gap-3">
+      <div class="card w-full">
+        <h3>Whistleblow an incident</h3>
+        <p>Submit a whistleblowing report if you believe revealing your identity, or reporting directly to staff puts yourself at risk.</p>
+        <p>Please use #helpop otherwise.</p>
+        <ul>
+            <li>Reports are treated with strict confidentiality</li>
+            <li>Provide as much information as possible to facilitate our investigation</li>
+            <li>We are committed to protecting individuals submitting reports in good faith against retaliation</li>
+        </ul>
+        <Button
+          link="https://docs.google.com/forms/d/e/1FAIpQLSc3kWnln91iNAplSiPtIB6YYziFq6y_kLuvBFhsCObcrNhKMQ/viewform?usp=sf_link"
+          linkText="Submit a whistleblowing report"
+          external
+        />
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -1,0 +1,146 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout
+  title="Appeals"
+  subtitle="All information pertaining to penalties, warnings & appeal processes can be found here"
+>
+  <section>
+    <h2>Types of Penalties</h2>
+    <p>
+      When an infraction of the server rules has been made, and moderation
+      action is required, server staff may penalize offenders with the
+      following:
+    </p>
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
+      <div class="card w-full">
+        <Icon class="text-4xl" name="fa7-solid:warning" />
+        <h3 class="mt-3">Warnings</h3>
+        <ul>
+          <li>Verbal &mdash; A reminder it is breaking the rules</li>
+          <li>
+            Official &mdash; Official record that remains active for 2 months
+            from date of issue
+          </li>
+          <li>
+            Permanent &mdash; Similar to official warnings, but stays active
+            until successfully appealed
+          </li>
+        </ul>
+        <p>
+          Accumulation of 3 active warnings will lead to a 1 week temporary ban,
+          with an additional 1 week per active warning above 3.
+        </p>
+      </div>
+
+      <div class="card w-full">
+        <Icon class="text-4xl" name="fa7-solid:gavel" />
+        <h3 class="mt-3">Bans</h3>
+        <ul>
+          <li>
+            Temporary &mdash; Any temporary ban in excess of 31 days is upgraded
+            to an appealable permanent ban.
+          </li>
+          <li>
+            Permanent &mdash; Remains in place till successfully appealed.
+          </li>
+          <li>
+            Permanent (Unappealable) &mdash; Cannot be appealed. Downgraded to
+            appealable permanent bans 6 months from the date of issue.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card w-full">
+        <Icon class="text-4xl" name="fa7-solid:person-arrow-down-to-line" />
+        <h3 class="mt-3">Demotions &amp; Confiscations</h3>
+        <ul>
+          <li>Demotion &mdash; Removal of rank or privileges</li>
+          <li>Confiscations &mdash; Forced removal or transfer of property</li>
+        </ul>
+      </div>
+
+      <div class="card w-full">
+        <Icon class="text-4xl" name="fa7-solid:file-invoice-dollar" />
+        <h3 class="mt-3">Fines</h3>
+        <ul>
+          <li>Monetary Fine &mdash; Reduction of in-game economy balance</li>
+          <li>Imprisonment &mdash; Terms must be served in-game</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Appeal Process</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-3">
+      <div class="card">
+        <Icon class="text-4xl" name="fa7-solid:file-circle-exclamation" />
+        <h3 class="mt-3">Penalty Issued</h3>
+        <p>Notice will be given to you for an issued penalty</p>
+      </div>
+      <div class="card">
+        <Icon class="text-4xl" name="fa7-solid:clock-rotate-left" />
+        <h3 class="mt-3">24h Cooldown</h3>
+        <p>Wait for 24hrs before appealing</p>
+      </div>
+      <div class="card">
+        <Icon class="text-4xl" name="fa7-solid:arrow-right-to-file" />
+        <h3 class="mt-3">Submit Appeal Form</h3>
+        <p>Submit the appeal form with reasoning or reflections</p>
+      </div>
+      <div class="card">
+        <Icon class="text-4xl" name="fa7-solid:file-circle-check" />
+        <h3 class="mt-3">Appeal Outcome</h3>
+        <p>Staff will notify you of your appeal outcome if successful</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tips for Successful Appeal</h2>
+    <ul>
+      <li>
+        <b>Show Understanding</b> &mdash; Showing understanding and acknowledging
+        the mistake or offense leads to a higher chance of appeal acceptance. If unsure,
+        of the reason, feel free to ask a member of staff.
+      </li>
+      <li>
+        <b>Your track record matters</b> &mdash; Having multiple past offenses result
+        in a lower chance of acceptance. You are advised to take a month or two to
+        reflect, then appeal again.
+      </li>
+      <li>
+        <b>Appeal when appropriate</b> &mdash; 24 hours from the time of issue for
+        all penalties, except unappealable permanent bans where the earliest appeal
+        should be considered 6 months from the time of issue.
+      </li>
+      <li>
+        <b>Hostile Behavior won't get you anywhere</b> &mdash; Making threats, using
+        insults, name-calling will not result in acceptance. Please ensure that your
+        language is not in a demeaning/demanding tone.
+      </li>
+      <li>
+        <b>Sincerity matters</b> &mdash; Be sincere in your appeal, don't do it "for
+        the sake of doing it".
+      </li>
+      <li>
+        <b>Accept and move on</b> &mdash; If your appeal is rejected, appeal again
+        after a month or stipulated time period.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Appeal Form</h2>
+    <p>Please use the following form to submit your appeal</p>
+    <Button
+      link="https://docs.google.com/forms/d/e/1FAIpQLSen-1sP__vyAI8UDpLYb--AcMP3S9hWmttV1i_ll3bvsqSMIA/viewform"
+      linkText="Submit an appeal"
+      external
+    />
+  </section>
+</BaseLayout>
