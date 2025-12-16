@@ -1,185 +1,304 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout headerImg="/page-content/wolvhaven(4h)/4h-skyline.png">
-    <div slot="pageHeader">
-        <h1 class="text-white font-bold max-w-fit">New WolvHaven City</h1>
-        <p class="text-white italic">4th Haven (4H), 2013&mdash;2023.</p>
-        <p class="text-white"><span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.</p>
-        <p class="text-white">New WolvHaven (4H) is the 4th edition of WolvHaven City, established in December 2013. It will be retired soon.</p>
+  <div slot="pageHeader">
+    <h1 class="text-white font-bold max-w-fit">New WolvHaven City</h1>
+    <p class="text-white italic">4th Haven (4H), 2013&mdash;2023.</p>
+    <p class="text-white">
+      <span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.
+    </p>
+    <p class="text-white">
+      New WolvHaven (4H) is the 4th edition of WolvHaven City, established in
+      December 2013. It will be retired soon.
+    </p>
+  </div>
+
+  <section>
+    <h2>The server's (old) capital</h2>
+    <p>
+      <span class="text-white bg-main-50 p-1">New WolvHaven</span> was the capital
+      of the server from 2013—2023. It has since been replaced by <a
+        href="/wolvhaven">New Wolfminster (5H)</a
+      > which is over 10x larger
+    </p>
+  </section>
+
+  <section>
+    <h2>Why was 4H retired?</h2>
+    <p>
+      Announced in December 2013, 4H was meant to be the final iteration of the
+      WolvHaven City project. However, in late 2015, problems soon started
+      showing up with the current world due to the way it was designed. Several
+      reasons were given such as:
+    </p>
+    <ul>
+      <li>
+        <span class="font-bold">Lack of space</span> — As the city was only approximately
+        2km by 2km, issues regaring space arose when space was unable to be provisioned
+        for an airport.
+      </li>
+      <li>
+        <span class="font-bold">Insufficient planning</span> — Many key parts of the
+        city's infrastructure, such as its expressways were squeezed into existence
+      </li>
+      <li>
+        <span class="font-bold">Poor design of roads</span> — 2-lane roads in Wolfminster
+        island with 3-block wide lanes were insufficient and becoming outdated
+      </li>
+      <li>
+        <span class="font-bold">Near impossible to rectify</span> — Fixing problems
+        would require a full rebuild of the city
+      </li>
+    </ul>
+    <p>
+      It was decided in a Parliament session in December 2016 to add a mega
+      fourth island to the existing map. However, after reviews, it was decided
+      that WolvHaven City would move onto its 5th edition.
+    </p>
+  </section>
+
+  <section>
+    <h2>Getting Around</h2>
+    <p>
+      The Metro network in 4H popularized WolvHaven and is the biggest reason
+      why members joined.
+    </p>
+
+    <img
+      class="w-full rounded-lg shadow-sm"
+      src="/page-content/wolvhaven(4h)/4h-metromap.png"
+    />
+    <p class="text-sm">This map was designed by Jotch in 2020</p>
+    <img
+      class="w-full rounded-lg shadow-sm"
+      src="/page-content/wolvhaven(4h)/4h-BERT-Map-2025.png"
+    />
+    <p class="text-sm">This map was designed by Axton in 2025</p>
+  </section>
+
+  <section>
+    <h2>Service Status</h2>
+    <h3>Metro</h3>
+    <div
+      class="card grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3 mt-3"
+    >
+      <!-- Line 1 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro1.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>City Line</span>
+          <span class="text-sm italic">Semi-automatic</span>
+        </div>
+      </div>
+      <!-- Line 2 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro2.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>7th Avenue Line</span>
+          <span class="text-sm italic">Semi-automatic</span>
+        </div>
+      </div>
+      <!-- Line 3 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro3.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>East-West Line</span>
+          <span class="text-sm italic">Semi-automatic</span>
+        </div>
+      </div>
+      <!-- Line 4 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro4.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>North-South Line</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!-- Line 5 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro5.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Island Line</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!-- Line 6 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro6.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Interborough Line</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!-- Line 6 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro8.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Interborough Exp</span>
+          <span class="text-sm italic">Suspended &mdash; No service</span>
+        </div>
+      </div>
+      <!-- Line 7 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro7.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Interborough Line</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!-- Line 9 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro9.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Circular Line</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!-- Line 10 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Metro10.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Airport Express</span>
+          <span class="text-sm italic">Semi-automatic</span>
+        </div>
+      </div>
+      <!-- Shuttle -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-MetroS.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Bella Vista Shuttle</span>
+          <span class="text-sm italic">Suspended &mdash; No service</span>
+        </div>
+      </div>
     </div>
 
-
-    <div>
-        <h2>The server's (old) capital</h2>
-        <p>
-            <span class="text-white bg-main-50 p-1">New WolvHaven</span> was the capital of the server from 2013—2023. It has since been replaced by <a href="/wolvhaven">New Wolfminster (5H)</a> which is over 10x larger
-        </p>
+    <h3 class="mt-3">BERT</h3>
+    <div
+      class="card grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3 mt-3"
+    >
+      <!-- District -->
+      <div class="flex flex-col gap-2">
+        <span class="bg-green-900 text-white px-3 py-1 text-center rounded-lg"
+          >District Line</span
+        >
+        <span class="text-sm italic">Automatic &mdash; 4-8min frequency</span>
+      </div>
+      <!-- Westford -->
+      <div class="flex flex-col gap-2">
+        <span class="bg-red-700 text-white px-3 py-1 text-center rounded-lg"
+          >Westford Line</span
+        >
+        <span class="text-sm italic">Semi-automatic</span>
+      </div>
+      <!-- Wolfminster -->
+      <div class="flex flex-col gap-2">
+        <span class="bg-blue-900 text-white px-3 py-1 text-center rounded-lg"
+          >Wolfminster Line</span
+        >
+        <span class="text-sm italic">Semi-automatic</span>
+      </div>
     </div>
 
-    <div>
-        <h2>Why was 4H retired?</h2>
-        <p>Announced in December 2013, 4H was meant to be the final iteration of the WolvHaven City project. However, in late 2015, problems soon started showing up with the current world due to the way it was designed. Several reasons were given such as:</p>
-        <ul>
-            <li><span class="font-bold">Lack of space</span> — As the city was only approximately 2km by 2km, issues regaring space arose when space was unable to be provisioned for an airport.</li>
-            <li><span class="font-bold">Insufficient planning</span> — Many key parts of the city's infrastructure, such as its expressways were squeezed into existence</li>
-            <li><span class="font-bold">Poor design of roads</span> — 2-lane roads in Wolfminster island with 3-block wide lanes were insufficient and becoming outdated</li>
-            <li><span class="font-bold">Near impossible to rectify</span> — Fixing problems would require a full rebuild of the city</li>
-        </ul>
-        <p>It was decided in a Parliament session in December 2016 to add a mega fourth island to the existing map. However, after reviews, it was decided that WolvHaven City would move onto its 5th edition.</p>
+    <h3 class="mt-3">Tram</h3>
+    <div
+      class="card grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3 mt-3"
+    >
+      <!--Tram 1 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Tram1.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Tram Line 1</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!--Tram 2 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Tram2.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Tram Line 2</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
+      <!--Tram 3 -->
+      <div class="flex gap-2">
+        <div>
+          <img
+            class="max-w-14"
+            src="/page-content/wolvhaven(4h)/4h-Tram3.png"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span>Tram Line 3</span>
+          <span class="text-sm italic">Manual &mdash; Request driver</span>
+        </div>
+      </div>
     </div>
-
-    <div>
-        <h2>Transport</h2>
-        <p>The Metro network in 4H popularized WolvHaven and is the biggest reason why members joined.</p>
-        
-        <img  class="w-full rounded-lg shadow-sm" src="/page-content/wolvhaven(4h)/4h-metromap.png"/>
-        <p class="text-sm">This map was designed by Jotch in 2020</p>
-        <img  class="w-full rounded-lg shadow-sm" src="/page-content/wolvhaven(4h)/4h-BERT-Map-2025.png"/>
-        <p class="text-sm">This map was designed by Axton in 2025</p>
-        <h3>Service Status</h3>
-        <hr style="height:5pt; visibility:hidden;" />
-        <h4>Metro</h4>
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro1.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-Automatic</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro2.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-Automatic</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro3.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-Automatic</p>
-                </div>
-            </div>
-        </div>
-        <hr style="height:5pt; visibility:hidden;" />
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro4.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro5.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro6.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-        </div>
-        <hr style="height:5pt; visibility:hidden;" />
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro7.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro8.png"/>
-                <div>
-                    <h4><b>Suspended</b></h4>
-                    <p class="mb-0">No service</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro9.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-        </div>
-        <hr style="height:5pt; visibility:hidden;" />
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Metro10.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-automatic</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-MetroS.png"/>
-                <div>
-                    <h4><b>Suspended</b></h4>
-                    <p class="mb-0">No service</p>
-                </div>
-            </div>
-            <div class="w-full p-6 gap-5 self-start">
-                </div>
-        </div>  
-        <br>
-        <h4>BERT</h4>
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/3 self-start" src="/page-content/wolvhaven(4h)/4h-BERT-DTL.svg"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Every 4-8 mins</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/3 self-start" src="/page-content/wolvhaven(4h)/4h-BERT-WFL.svg"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-Automatic</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/3 self-start" src="/page-content/wolvhaven(4h)/4h-BERT-WML.svg"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Semi-Automatic</p>
-                </div>
-            </div>
-        </div>
-        <hr style="height:5pt; visibility:hidden;" />
-        <br>
-        <h4>Tram</h4>
-        <div class="flex w-full flex-col lg:flex-row gap-2">
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Tram1.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Tram2.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-            <div class="w-full card flex gap-5 self-start">
-                <img  class="w-1/4 self-start" src="/page-content/wolvhaven(4h)/4h-Tram3.png"/>
-                <div>
-                    <h4><b>Good Service</b></h4>
-                    <p class="mb-0">Manual</p>
-                </div>
-            </div>
-        </div> 
+  </section>
 </BaseLayout>

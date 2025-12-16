@@ -1,154 +1,255 @@
 ---
-import Button from '../components/Button.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout headerImg="/page-content/home/header.png">
-    <div slot="pageHeader">
-        <h1 class="text-white font-bold max-w-fit">WolvHaven City</h1>
-        <p class="text-white"><span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.</p>
-        <p class="text-white">Established since 2011, the WolvHaven City project is the capital of the server, and acts as a showcase city.</p>
-        <div class="flex flex-col lg:flex-row gap-2">
-            <Button linkText="View the masterplan" link="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg" type="white" external/>
-            <Button linkText="Latest detailed plan" link="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/" type="white" external/>
-        </div>
+  <div slot="pageHeader">
+    <h1 class="text-white font-bold max-w-fit">WolvHaven City</h1>
+    <p class="text-white">
+      <span class="bg-main-50 p-1">More to Explore</span> — the heart of our server.
+    </p>
+    <p class="text-white">
+      Established since 2011, the WolvHaven City project is the capital of the
+      server, and acts as a showcase city.
+    </p>
+    <div class="flex flex-col lg:flex-row gap-2">
+      <Button
+        linkText="View the masterplan"
+        link="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg"
+        type="white"
+        external
+      />
+      <Button
+        linkText="Latest detailed plan"
+        link="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/"
+        type="white"
+        external
+      />
     </div>
+  </div>
 
-    <section>
-        <h2>The server's capital</h2>
-        <p>
-            <span class="text-white bg-main-50 p-1">WolvHaven City</span> is the capital of the server. When WolvHaven was established in 2011, its main goal was to create an immersive city in Minecraft for a survival-roleplay experience.
-        </p>
-        <p>As the server evolved into one that focuses on creative building, WolvHaven City has evolved into acting as the showcase city, and community-build of the server.</p>
-        <p>The city is in its 5th edition, dubbed "New Wolfminster", and is over 10x larger than its predecessor, <a href="/wolvhaven(4h)">New WolvHaven (4H)</a>.</p>
-    </section>
+  <section>
+    <h2>The server's capital</h2>
+    <p>
+      <span class="text-white bg-main-50 p-1">WolvHaven City</span> is the capital
+      of the server. When WolvHaven was established in 2011, its main goal was to
+      create an immersive city in Minecraft for a survival-roleplay experience.
+    </p>
+    <p>
+      As the server evolved into one that focuses on creative building,
+      WolvHaven City has evolved into acting as the showcase city, and
+      community-build of the server.
+    </p>
+    <p>
+      The city is in its 5th edition, dubbed "New Wolfminster", and is over 10x
+      larger than its predecessor, <a href="/wolvhaven(4h)"
+        >New WolvHaven (4H)</a
+      >.
+    </p>
+  </section>
 
-    <section>
-        <h2>Getting Around</h2>
-        <p>A metro network is available in 5th Haven, operated by the Société Métropolitaine et Régionale des Transports (SMRT) with Transport for WolvHaven</p>
-        <div class="flex w-full gap-2 flex-wrap">
-            <img class="max-h-12" src="/page-content/transport/TransportForWH_BLACK.png"/>
-            <img class="max-h-12" src="/page-content/transport/Metro-Icon.svg"/>
-            <img class="max-h-12" src="/page-content/transport/LRT-Icon.svg"/>
-            <img class="max-h-12" src="/page-content/transport/Bus-Icon.svg"/>
-            <img class="max-h-12" src="/page-content/transport/Ferry-Icon.svg"/>
+  <section>
+    <h2>Getting Around</h2>
+    <p>
+      A metro network is available in 5th Haven, operated by the Société
+      Métropolitaine et Régionale des Transports (SMRT) with Transport for
+      WolvHaven
+    </p>
+    <div class="flex w-full gap-2 flex-wrap">
+      <img
+        class="max-h-12"
+        src="/page-content/transport/TransportForWH_BLACK.png"
+      />
+      <img class="max-h-12" src="/page-content/transport/Metro-Icon.svg" />
+      <img class="max-h-12" src="/page-content/transport/LRT-Icon.svg" />
+      <img class="max-h-12" src="/page-content/transport/Bus-Icon.svg" />
+      <img class="max-h-12" src="/page-content/transport/Ferry-Icon.svg" />
+    </div>
+    
+    <img
+        class="w-full rounded-lg shadow-sm border mt-3"
+        src="/page-content/wolvhaven/5h-metromap.png"
+    />
+
+    <div class="card grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3 mt-3">
+      <!-- T1 Wolfminster Line -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-T1.png" />
         </div>
-        <div class="flex flex-col 2xl:flex-row mt-5 gap-3">
-            <div class="w-full 2xl:w-3/4">
-                <img class="w-full rounded-lg shadow-sm border" src="/page-content/wolvhaven/5h-metromap.png"/>
-            </div>
-            <div class="w-full 2xl:w-1/4 card">
-                <h3>Service Status</h3>
-                <div class="flex flex-col gap-2">
-                    <!-- T1 Wolfminster Line -->
-                    <div class="flex gap-2">
-                        <div>
-                            <img  class="max-w-14" src="/page-content/transport/5H-T1.png"/>
-                        </div>
-                        <div class="flex flex-col">
-                            <span>Wolfminster Line</span>
-                            <span class="text-sm italic">5 min intervals</span>
-                        </div>
-                    </div>
-                    <!-- T2 Decennial Line -->
-                    <div class="flex gap-2">
-                        <div>
-                            <img  class="max-w-14" src="/page-content/transport/5H-T2.png"/>
-                        </div>
-                        <div class="flex flex-col">
-                            <span>Decennial Line</span>
-                            <span class="text-sm italic">5 min intervals</span>
-                        </div>
-                    </div>
-                    <!-- T3 East-West Line -->
-                    <div class="flex gap-2">
-                        <div>
-                            <img  class="max-w-14" src="/page-content/transport/5H-T3.png"/>
-                        </div>
-                        <div class="flex flex-col">
-                            <span>East-West Line</span>
-                            <span class="text-sm italic">5 min intervals</span>
-                        </div>
-                    </div>
-                    <!-- T4 Brookedge Line -->
-                    <div class="flex gap-2">
-                        <div>
-                            <img  class="max-w-14" src="/page-content/transport/5H-T4.png"/>
-                        </div>
-                        <div class="flex flex-col">
-                            <span>Brookedge Line</span>
-                            <span class="text-sm italic">5 min intervals</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+        <div class="flex flex-col">
+          <span>Wolfminster Line</span>
+          <span class="text-sm italic">Automatic &mdash; 5 min frequency</span>
         </div>
-    </section>
-
-    <section>
-        <h2>Contribute</h2>
-        <p>WolvHaven City is built by, and is the embodiment of its community. Most official communal events are held here.</p> 
-        <p>If you would like to contribute to the development of the city, you will need:</p>
-        <ul>
-            <li>WorldEdit Qualification <i>(more info at <a href="/apply">application forms page</a>)</i></li>
-            <li>The [Builder] rank <i>(more info at <a href="/ranks">ranks page</a>)</i></li>
-        </ul>
-        <ul>
-            <li><a href="/ranks" target="_blank">Ranks page</a> for [Builder] rank info</li>
-            <li>The <a href="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg" target="_blank">masterplan</a> for overall planning and open areas for contribution</li>
-            <li><span class="bg-indigo-300 p-1">#fifth-haven</span> &amp <span class="bg-indigo-300 p-1">#fifth-haven-planning</span> channel on Discord</li>
-            <li><a href="https://docs.google.com/document/d/1yO5dyEpg8UmTygk42gJsEXQebzsGVIm4TjylpsFz-WM/edit" target="_blank">WHRDSR</a> - WolvHaven Road Design and Signage Regulations</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Contribution Framework</h2>
-        <ul>
-            <li>The City is divided into 6 different planning areas, each overseen by a planner in-charge.</li>
-            <li>Within each planning area, development plans, which are detailed plans are produced, usually as part of a 3-month plan period.</li>
-            <li>All plans are designed with the overall masterplan in-mind. The Chief Planner overseeing details for connecting different planning areas together.</li>
-        </ul>
-
-        <div class="flex w-full flex-col 2xl:flex-row gap-2">
-            <div class="flex w-full 2xl:w-2/3 flex-col gap-2">
-                <img  class="w-full rounded-lg shadow-sm" src="/page-content/wolvhaven/DevelopmentFramework.png"/>
-                <div class="w-full flex gap-2">
-                    <Button className="w-full" linkText="View the masterplan" link="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg" type="main" external/>
-                    <Button className="w-full" linkText="Latest detailed plan" link="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/" type="main" external/>
-                </div>
-            </div>
-            <div class="flex w-full 2xl:w-1/3 flex-wrap gap-2">
-                <div class="w-full card flex gap-5 self-start">
-                    <img  class="w-1/5 self-start" src="/faces/minebuilder1223.png"/>
-                    <div>
-                        <h4>minebuilder1223</h4>
-                        <p class="mb-0">Chief Planner, Capitol Island</p>
-                    </div>
-                </div>
-                <div class="w-full card flex gap-5 self-start">
-                    <img  class="w-1/5 self-start" src="/faces/silverwolv.png"/>
-                    <div>
-                        <h4>SilverWolv</h4>
-                        <p class="mb-0">Wolfminster, Westford</p>
-                    </div>
-                </div>
-                <div class="w-full card flex gap-5 self-start">
-                    <img  class="w-1/5 self-start" src="/faces/matthieutofu.png"/>
-                    <div>
-                        <h4>MatthieuTofu</h4>
-                        <p class="mb-0">Brookedge, Westford</p>
-                    </div>
-                </div>
-                <div class="w-full card flex gap-5 self-start">
-                    <img  class="w-1/5 self-start" src="/faces/heiopeii.png"/>
-                    <div>
-                        <h4>Heiopeii</h4>
-                        <p class="mb-0">Exchange Place, Brookedge, Brookedge Port</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <!-- T2 Decennial Line -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-T2.png" />
         </div>
-    </section>
+        <div class="flex flex-col">
+          <span>Decennial Line</span>
+          <span class="text-sm italic">Automatic &mdash; 5 min frequency</span>
+        </div>
+      </div>
+      <!-- T3 East-West Line -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-T3.png" />
+        </div>
+        <div class="flex flex-col">
+          <span>East-West Line</span>
+          <span class="text-sm italic">Automatic &mdash; 5 min frequency</span>
+        </div>
+      </div>
+      <!-- T4 Brookedge Line -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-T4.png" />
+        </div>
+        <div class="flex flex-col">
+          <span>Brookedge Line</span>
+          <span class="text-sm italic">Automatic &mdash; 5 min frequency</span>
+        </div>
+      </div>
+    <!-- K Market St LRT -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-K.png" />
+        </div>
+        <div class="flex flex-col">
+          <span>Market St. LRT</span>
+          <span class="text-sm italic">Service On Request</span>
+        </div>
+      </div>
+    <!-- T4 Brookedge Line -->
+      <div class="flex gap-2">
+        <div>
+          <img class="max-w-14" src="/page-content/transport/5H-M.png" />
+        </div>
+        <div class="flex flex-col">
+          <span>Capitol Monorail</span>
+          <span class="text-sm italic">Automatic &mdash; 3 min frequency</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contribute</h2>
+    <p>
+      WolvHaven City is built by, and is the embodiment of its community. Most
+      official communal events are held here.
+    </p>
+    <p>
+      If you would like to contribute to the development of the city, you will
+      need:
+    </p>
+    <ul>
+      <li>
+        WorldEdit Qualification <i
+          >(more info at <a href="/apply">application forms page</a>)</i>
+      </li>
+      <li>
+        The [Builder] rank <i>(more info at <a href="/ranks">ranks page</a>)</i>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="/ranks" target="_blank">Ranks page</a> for [Builder] rank info
+      </li>
+      <li>
+        The <a
+          href="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg"
+          target="_blank">masterplan</a
+        > for overall planning and open areas for contribution
+      </li>
+      <li>
+        <span class="bg-indigo-300 p-1">#fifth-haven</span> &amp <span
+          class="bg-indigo-300 p-1">#fifth-haven-planning</span
+        > channel on Discord
+      </li>
+      <li>
+        <a
+          href="https://docs.google.com/document/d/1yO5dyEpg8UmTygk42gJsEXQebzsGVIm4TjylpsFz-WM/edit"
+          target="_blank">WHRDSR</a
+        > - WolvHaven Road Design and Signage Regulations
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contribution Framework</h2>
+    <ul>
+      <li>
+        The City is divided into 6 different planning areas, each overseen by a
+        planner in-charge.
+      </li>
+      <li>
+        Within each planning area, development plans, which are detailed plans
+        are produced, usually as part of a 3-month plan period.
+      </li>
+      <li>
+        All plans are designed with the overall masterplan in-mind. The Chief
+        Planner overseeing details for connecting different planning areas
+        together.
+      </li>
+    </ul>
+
+    <div class="flex w-full flex-col 2xl:flex-row gap-2">
+      <div class="flex w-full 2xl:w-2/3 flex-col gap-2">
+        <img
+          class="w-full rounded-lg shadow-sm"
+          src="/page-content/wolvhaven/DevelopmentFramework.png"
+        />
+        <div class="w-full flex gap-2">
+          <Button
+            className="w-full"
+            linkText="View the masterplan"
+            link="https://docs.google.com/presentation/d/1HMOT_pa9D0PddoP2EXaClFUpPalXGwoM0WdilkdJipg"
+            type="main"
+            external
+          />
+          <Button
+            className="w-full"
+            linkText="Latest detailed plan"
+            link="https://docs.google.com/presentation/d/1XWQEYOFfjSOJJF6T_3Lc_sRafE-KA-T_JjyLEBOAw_A/"
+            type="main"
+            external
+          />
+        </div>
+      </div>
+      <div class="flex w-full 2xl:w-1/3 flex-wrap gap-2">
+        <div class="w-full card flex gap-5 self-start">
+          <img class="w-1/5 self-start" src="/faces/minebuilder1223.png" />
+          <div>
+            <h4>minebuilder1223</h4>
+            <p class="mb-0">Chief Planner, Capitol Island</p>
+          </div>
+        </div>
+        <div class="w-full card flex gap-5 self-start">
+          <img class="w-1/5 self-start" src="/faces/silverwolv.png" />
+          <div>
+            <h4>SilverWolv</h4>
+            <p class="mb-0">Wolfminster, Westford</p>
+          </div>
+        </div>
+        <div class="w-full card flex gap-5 self-start">
+          <img class="w-1/5 self-start" src="/faces/matthieutofu.png" />
+          <div>
+            <h4>MatthieuTofu</h4>
+            <p class="mb-0">Brookedge, Westford</p>
+          </div>
+        </div>
+        <div class="w-full card flex gap-5 self-start">
+          <img class="w-1/5 self-start" src="/faces/heiopeii.png" />
+          <div>
+            <h4>Heiopeii</h4>
+            <p class="mb-0">Exchange Place, Brookedge, Brookedge Port</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
