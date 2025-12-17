@@ -88,7 +88,7 @@ headerImg: "/page-content/appeals/appeal.png"
 
 News posts should be either in `.md` or `.mdx` files. They must be formatted in `lower-kebab-case` and follow the following format:
 ```
-YYYY-MM-DD-url-slut-here.md
+YYYY-MM-DD-url-slug-here.md
 ```
 
 - Use `.md` files by default

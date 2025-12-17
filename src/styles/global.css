@@ -38,12 +38,16 @@
     @apply text-main-50;
   }
 
-  main a{
-    @apply underline underline-offset-6;
-  }
-  
   a:hover {
     @apply text-main-100;
+  }
+
+  main a {
+    @apply underline underline-offset-6;
+  }
+
+  main a:hover {
+    @apply bg-current/10;
   }
 
   h1 {
@@ -59,7 +63,7 @@
     @apply mb-2 text-lg lg:text-xl leading-[1.2];
   }
 
-  section{
+  section {
     @apply mb-8;
   }
 
@@ -107,16 +111,16 @@
 }
 
 @layer components {
-  .btn-white-outline{
+  .btn-white-outline {
     @apply text-white bg-transparent hover:bg-white hover:text-black rounded-md px-5 py-2.5 border-2 border-white;
   }
 
-  .btn-main-outline{
+  .btn-main-outline {
     @apply text-main-50 bg-transparent hover:bg-main-50 hover:text-white rounded-md px-5 py-2.5 border-2 border-main-50;
   }
 
   .card {
-    @apply  p-6 bg-white border border-gray-200 rounded-lg shadow-sm;
+    @apply p-6 bg-white border border-gray-200 rounded-lg shadow-sm;
   }
 
   .striped-bg-orange {
@@ -167,7 +171,4 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-.latest_news a {
-  color: white;
 }
