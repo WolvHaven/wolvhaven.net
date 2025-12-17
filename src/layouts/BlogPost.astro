@@ -22,7 +22,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeroInContent =
 		}
 	</div>	
 	<article>
-		{showHeroInContent && heroImage && <img class="w-full rounded-lg shadow-sm border" src={heroImage} alt="" />}
+		{showHeroInContent && heroImage && <img alt="Article Header Image" class="w-full rounded-lg shadow-sm border" src={heroImage} alt="" />}
 		<slot />
 	</article>
 </BaseLayout>

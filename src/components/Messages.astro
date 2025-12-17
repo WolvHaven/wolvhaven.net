@@ -52,7 +52,7 @@ const { messages = [] } = Astro.props;
           <Icon name={levelClasses[msg.level].icon} class="text-4xl shrink-0" />
           <p class="text-lg text-wrap">
             {msg.content}
-            <br/>
+            <br />
             {msg.link && (
               <a
                 class={`${levelClasses[msg.level].text} font-bold`}
@@ -71,9 +71,7 @@ const { messages = [] } = Astro.props;
               </a>
             )}
           </p>
-          <p class="text-lg">
-            
-          </p>
+          <p class="text-lg"></p>
         </div>
       </div>
     ))
@@ -89,7 +87,7 @@ const { messages = [] } = Astro.props;
           <Icon name={levelClasses[messages[0].level].icon} class="text-4xl" />
           <p class="text-lg text-wrap">
             {messages[0].content}
-            <br/>
+            <br />
             {messages[0].link && (
               <a
                 class={`${levelClasses[messages[0].level].text} font-bold`}

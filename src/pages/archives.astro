@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout
+  title="Archives"
+  subtitle="Archived resources released for public consumption"
+>
+  <section>
+    <h2>World Downloads</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <!-- SMP Worlds -->
+      <div class="card flex gap-3">
+        <div>
+          <Icon name="fa7-solid:cube" class="text-5xl" />
+        </div>
+        <div class="flex flex-col grow">
+          <h3>Survival Multiplayer Worlds</h3>
+          <p>Retired 2024 &mdash; Includes Pangaea, Nether, The End</p>
+          <Button
+            link="https://mega.nz/file/VpIj2CxQ#icw0M7ORvWVsKVZNPsjpe5d0hYs6pkYeBi8hw5aD7vs"
+            linkText="World Download (via mega.nz)"
+            external
+          />
+        </div>
+      </div>
+      <!-- Sandbox -->
+      <div class="card flex gap-3">
+        <div>
+          <Icon name="fa7-solid:cube" class="text-5xl" />
+        </div>
+        <div class="flex flex-col grow">
+          <h3>The Sandbox</h3>
+          <p>Retired 2024</p>
+          <Button
+            link="https://mega.nz/file/xlRjCKiI#gOl4FSFM4WjQGfj7VC37a1TFEycPeh6f4bowu87w7FA"
+            linkText="World Download (via mega.nz)"
+            external
+          />
+        </div>
+      </div>
+      <!-- 3H -->
+      <div class="card flex gap-3">
+        <div>
+          <Icon name="fa7-solid:cube" class="text-5xl" />
+        </div>
+        <div class="flex flex-col grow">
+          <h3>WolvHaven City (3rd Haven)</h3>
+          <p>Retired 2014 &mdash; 3rd iteration of WolvHaven City project</p>
+          <Button
+            link="https://www.planetminecraft.com/project/wolv-haven-city/"
+            linkText="World Download (via Planet Minecraft)"
+            external
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Parliament</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <div class="card flex gap-3">
+        <div>
+          <Icon name="fa7-solid:table-list" class="text-5xl" />
+        </div>
+        <div class="flex flex-col grow">
+          <h3>Hansard and Bills Index</h3>
+          <p>Index with links to all bills and hansards from 2017 to 2021</p>
+          <Button
+            link="https://docs.google.com/spreadsheets/d/1tm6wXX9TfTE__gJ1u9R4owHnNQSva7p8Mt3eJwmSZ8g/edit"
+            linkText="Google Sheet"
+            external
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

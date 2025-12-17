@@ -1,73 +1,133 @@
 ---
-import Button from '../components/Button.astro';
-import Messages from '../components/Messages.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from "../components/Button.astro";
+import Messages from "../components/Messages.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import { SEO } from "astro-seo";
 ---
 
 <html lang="en">
-	<head>
-    	<SEO
-      	title="WolvHaven - A creative Minecraft server for the city-build and transit enthusiast"
-      	description="Established since 2011, WolvHaven was set up by SilverWolv to build a city in Minecraft with a functioning survival roleplay system, but has since evolved to become a Creative city building server focused on Architecture, Infrastructrue and Transit."
-	  	/>
-		<meta name="google-site-verification" content="cpkWLObRJ9tN3bDz34G6Q9HY5amMu8_He6jrhhK7Flg" />
-	</head>
+  <head>
+    <SEO
+      title="WolvHaven - A creative Minecraft server for the city-build and transit enthusiast"
+      description="Established since 2011, WolvHaven was set up by SilverWolv to build a city in Minecraft with a functioning survival roleplay system, but has since evolved to become a Creative city building server focused on Architecture, Infrastructrue and Transit."
+    />
+    <meta
+      name="google-site-verification"
+      content="cpkWLObRJ9tN3bDz34G6Q9HY5amMu8_He6jrhhK7Flg"
+    />
+  </head>
 </html>
 
 <BaseLayout headerImg="/page-content/home/header.png">
-	<div slot="pageHeader">
-		<h1 class="text-white font-bold p-2 max-w-fit bg-main-50">More to Explore.</h1>
-		<p class="text-white">A Creative City-Building Minecraft server for the Architecture, Infrastructure, and Transit Enthusiast.</p>
-		<p class="text-white">IP &mdash; <span class="bg-main-50 p-1">play.wolvhaven.net</span></p>
-		<p class="text-white text-sm">Minecraft Version: 1.21.4 (as of December 2025)</p>
-	</div>
-	
-	<section>
-		<h2>Welcome to WolvHaven!</h2>
-		<p><span class="text-white bg-main-50 p-1">WolvHaven</span> is a creative city-building Minecraft server for the architecture, infrastructure, and transit enthusiast.</p>
-		<p>Established since 2011, WolvHaven was set up by SilverWolv to build a city in Minecraft with a functioning survival roleplay system, but has since evolved to become a Creative city building server focused on Architecture, Infrastructrue and Transit.</p>
-		<ul>
-			<li><a href="/wolvhaven">WolvHaven City</a> acts as the showcase city of the server</li>
-			<li>Players may build their own towns and cities in the creative city building worlds of <a href="/city-build">Gardellia or Calidia</a></li>
-		</ul>
-	</section>
+  <div slot="pageHeader">
+    <h1 class="text-white font-bold p-2 max-w-fit bg-main-50">
+      More to Explore.
+    </h1>
+    <p class="text-white">
+      A Creative City-Building Minecraft server for the Architecture,
+      Infrastructure, and Transit Enthusiast.
+    </p>
+    <p class="text-white">
+      IP &mdash; <span class="bg-main-50 p-1">play.wolvhaven.net</span>
+    </p>
+    <p class="text-white text-sm">
+      Minecraft Version: 1.21.4 (as of December 2025)
+    </p>
+  </div>
 
-	<!-- Note: Message content should not contain special characters like emdashes -->
-	<section>
-		<Messages messages={[
-			{level: "info", content: "Latest News: 03/12/25 | Launching the WolvHaven Community Channel", link:"/news/2025-12-03-community-channel", linkText:"Read more", externalLink: false },
-			{level: "info", content: "Latest Video: 06/12/25 | Rebuilding a realistic HIGHWAY in Minecraft - Building WolvHaven", link:"https://www.youtube.com/watch?v=1JE2hQuH3Oo", linkText:"Watch Video", externalLink: true },
-			{level: "warning", content: "Due to a technical issue, to board trains, you will need to install the SmoothCoasters mod, available for forge and fabric", link:"https://modrinth.com/mod/smoothcoasters/versions", linkText: "SmoothCoasters on Modrinth", externalLink: true },
-		]}/>
-	</section>
+  <section>
+    <h2>Welcome to WolvHaven!</h2>
+    <p>
+      <span class="text-white bg-main-50 p-1">WolvHaven</span> is a creative city-building
+      Minecraft server for the architecture, infrastructure, and transit enthusiast.
+    </p>
+    <p>
+      Established since 2011, WolvHaven was set up by SilverWolv to build a city
+      in Minecraft with a functioning survival roleplay system, but has since
+      evolved to become a Creative city building server focused on Architecture,
+      Infrastructrue and Transit.
+    </p>
+    <ul>
+      <li>
+        <a href="/wolvhaven">WolvHaven City</a> acts as the showcase city of the server
+      </li>
+      <li>
+        Players may build their own towns and cities in the creative city
+        building worlds of <a href="/city-build">Gardellia or Calidia</a>
+      </li>
+    </ul>
+  </section>
 
+  <!-- Note: Message content should not contain special characters like emdashes -->
+  <section>
+    <Messages
+      messages={[
+        {
+          level: "info",
+          content:
+            "Latest News: 03/12/25 | Launching the WolvHaven Community Channel",
+          link: "/news/2025-12-03-community-channel",
+          linkText: "Read more",
+          externalLink: false,
+        },
+        {
+          level: "info",
+          content:
+            "Latest Video: 06/12/25 | Rebuilding a realistic HIGHWAY in Minecraft - Building WolvHaven",
+          link: "https://www.youtube.com/watch?v=1JE2hQuH3Oo",
+          linkText: "Watch Video",
+          externalLink: true,
+        },
+        {
+          level: "warning",
+          content:
+            "Due to a technical issue, to board trains, you will need to install the SmoothCoasters mod, available for forge and fabric",
+          link: "https://modrinth.com/mod/smoothcoasters/versions",
+          linkText: "SmoothCoasters on Modrinth",
+          externalLink: true,
+        },
+      ]}
+    />
+  </section>
 
-	<section>
-		<h2>Our offered gamemodes</h2>
-		<div class="flex flex-col lg:flex-row gap-3">
+  <section>
+    <h2>Our offered gamemodes</h2>
+    <div class="flex flex-col lg:flex-row gap-3">
+      <div
+        class="bg-[url('/page-content/home/wh-city-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl"
+      >
+        <div
+          class="px-5 py-10 w-full min-h-full bg-black/50 rounded-lg flex flex-col"
+        >
+          <div class="flex-1">
+            <h3 class="text-white">WolvHaven City</h3>
+            <p class="italic text-white">More to Explore</p>
+            <p class="text-white">
+              The WolvHaven City project is the capital of the server, and acts
+              as a showcase city.
+            </p>
+          </div>
+          <Button link="/wolvhaven" linkText="Explore WolvHaven" type="white" />
+        </div>
+      </div>
 
-			<div class="bg-[url('/page-content/home/wh-city-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl">
-				<div class="px-5 py-10 w-full min-h-full bg-black/50 rounded-lg flex flex-col">
-					<div class="flex-1">
-						<h3 class="text-white">WolvHaven City</h3>
-						<p class="italic text-white">More to Explore</p>
-						<p class="text-white">The WolvHaven City project is the capital of the server, and acts as a showcase city.</p>
-					</div>
-					<Button link="/wolvhaven" linkText="Explore WolvHaven" type="white"/>
-				</div>
-			</div>
-
-			<div class="bg-[url('/page-content/home/city-build-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl">
-				<div class="px-5 py-10 w-full min-h-full bg-black/30 rounded-lg flex flex-col">
-					<div class="flex-1">
-						<h3 class="text-white">Creative City-Build</h3>
-						<p class="italic text-white">Create to Captivate</p>
-						<p class="text-white">Build your own city and let your creativity run free. Create something to amaze the masses.</p>
-					</div>
-					<Button link="/city-build" linkText="Build your city" type="white"/>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div
+        class="bg-[url('/page-content/home/city-build-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl"
+      >
+        <div
+          class="px-5 py-10 w-full min-h-full bg-black/30 rounded-lg flex flex-col"
+        >
+          <div class="flex-1">
+            <h3 class="text-white">Creative City-Build</h3>
+            <p class="italic text-white">Create to Captivate</p>
+            <p class="text-white">
+              Build your own city and let your creativity run free. Create
+              something to amaze the masses.
+            </p>
+          </div>
+          <Button link="/city-build" linkText="Build your city" type="white" />
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

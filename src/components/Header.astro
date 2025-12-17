@@ -5,8 +5,8 @@ import HeaderLink from './HeaderLink.astro';
 <header class="p-5 bg-white m-0 border-b lg:border-b-0 lg:border-r">
 	<nav class="flex flex-col flex-start p-1">
 		<div class="flex flex-row justify-between">
-			<a href="/"><img class="w-2/3 lg:w-full max-w-xs" src="/WolvHavenLogo.png"/></a>
-			<a id="toggleNavBar" class="lg:hidden border-2 rounded-lg p-2 self-center"><img id="hamburgerIcon" class="w-5" src="/bars-solid.svg"></a>
+			<a href="/"><img alt="WolvHaven Logo" class="w-2/3 lg:w-full max-w-xs" src="/WolvHavenLogo.png"/></a>
+			<a id="toggleNavBar" class="lg:hidden border-2 rounded-lg p-2 self-center"><img alt="Menu Icon" id="hamburgerIcon" class="w-5" src="/bars-solid.svg"></a>
 		</div>
 			
 		<div id="navBarItems" class="hidden lg:block flex flex-col flex-start mt-3 space-y-2">
@@ -28,6 +28,7 @@ import HeaderLink from './HeaderLink.astro';
 				<HeaderLink href="/forms">Application forms</HeaderLink>
 				<HeaderLink href="/culture-safety">Culture & safety</HeaderLink>
 				<HeaderLink href="/appeal">Appeal a penalty</HeaderLink>
+				<HeaderLink href="/archives">Archives</HeaderLink>
 				<HeaderLink external href="http://play.wolvhaven.net:8123/">Dynmap</HeaderLink>
 			</div>
 			<div class="flex flex-col flex-start gap-2">

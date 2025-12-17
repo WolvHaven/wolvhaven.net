@@ -1,197 +1,325 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Server Staff" subtitle="All members of staff on the server">
+  <section>
     <h2>Need assistance?</h2>
-    <p>You can reach out to <span class="bg-pink-600 text-black p-1">@Staff</span> on our Discord server or individual staff members in game.</p>
+    <p>
+      You can reach out to <span class="bg-pink-600 text-white p-1">@Staff</span
+      > on our Discord server or individual staff members in game.
+    </p>
+  </section>
 
+  <section>
     <h2>Staff Departments</h2>
-    <div class="flex flex-wrap">
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Creative Affairs & Regulation Department</h4>
-                <p>Manages Gardellia and Calidia. Is in charge of the Claims Registry and approving projects.</p>
-                <p><b>Head of Department:</b> <i><b>MatthieuTofu</b></i></p>
-                <span class="bg-pink-600 text-black p-1">@CARD</span>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>WolvHaven Development Commision</h4>
-                <p>Develops and maintains the server's technical infrastructure, including web services.</p>
-                <p><b>Head of Department:</b> <i><b>nixholas</b></i></p>
-                <span class="bg-pink-600 text-black p-1">@DEVCOM</span>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Ministry for Culture and Foreign Affairs</h4>
-                <p>Manages community development and server promotion, including the Communications and Information Department (CID)</p>
-                <p><b>Heads of Department:</b> <i><b>jotch</b></i> & <b><i>Carew</i></b></p>
-                <span class="bg-pink-600 text-black p-1">@MCFA</span>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Ministry for Internal Affairs</h4>
-                <p>Responsible for internal and external server security. Manages the immigration test.</p>
-                <p><b>Head of Department:</b> <i><b>CM_Raiders</b></i></p>
-                <span class="bg-pink-600 text-black p-1">@MIA</span>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full card">
-                <h4>Ministry for Infrastructure and National Development</h4>
-                <p>Responsible for planning public infrastructure.</p>
-                <p><b>Head of Department:</b> <i><b>BargainBinAdmin</b></i></p>
-                <span class="bg-pink-600 text-black p-1">@MIND</span>
-            </div>
-        </div>
-        <div class="w-full lg:w-1/3 p-2">
-            <div class="w-full min-h-full p-6 border-gray-200 rounded-lg">
-            </div>
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+      <div class="card flex flex-col gap-2">
+        <h3>Creative Affairs & Regulation Department (CARD)</h3>
+        <span class="bg-pink-600 text-white p-1 w-fit">@CARD</span>
+        <p>
+          Manages affairs related to creative city build worlds Gardellia and
+          Calidia.
+        </p>
+        <p>In charge of the Claims Registry and approving projects.</p>
+        <p><b>Head of Department:</b> <i><b>MatthieuTofu</b></i></p>
+      </div>
+
+      <div class="card flex flex-col gap-2">
+        <h3>WolvHaven Development Commision (DEVCOM)</h3>
+        <span class="bg-pink-600 text-white p-1 w-fit">@DEVCOM</span>
+        <p>
+          Develops and maintains the server's technical infrastructure,
+          including web services.
+        </p>
+        <p><b>Head of Department:</b> <i><b>nixholas</b></i></p>
+      </div>
+
+      <div class="card flex flex-col gap-3">
+        <h3>Ministry for Culture and Foreign Affairs (MCFA)</h3>
+        <span class="bg-pink-600 text-white p-1 w-fit">@MCFA</span>
+        <p>
+          Manages community development and server promotion, including the
+          Communications and Information Department (CID)
+        </p>
+        <p>
+          <b>Heads of Department:</b>
+          <i><b>jotch</b></i> &amp; <b><i>Carew</i></b>
+        </p>
+      </div>
+
+      <div class="card flex flex-col gap-3">
+        <h3>Ministry Internal Affairs (MIA)</h3>
+        <span class="bg-pink-600 text-white p-1 w-fit">@MIA</span>
+        <p>
+          Responsible for internal and external server security. Manages the
+          immigration test.
+        </p>
+        <p>
+          <b>Heads of Department:</b>
+          <i><b>jotch</b></i> &amp; <b><i>CM_Raiders</i></b>
+        </p>
+      </div>
+
+      <div class="card flex flex-col gap-3">
+        <h3>Ministry for Infrastructure and National Development (MIND)</h3>
+        <span class="bg-pink-600 text-white p-1 w-fit">@MIND</span>
+
+        <p>Responsible for planning public infrastructure.</p>
+        <p><b>Head of Department:</b> <i><b>BargainBinAdmin</b></i></p>
+      </div>
     </div>
-    <br>
-    <h2>Staff List</h2>
-    <hr style="height:5pt; visibility:hidden;" />
-    <h4><span class="bg-red-800 text-white p-1">[Owner]</span></h4>
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/SilverWolv/64"/>
-            <div>
-                <h4><b>SilverWolv</b></h4>
-                <p class="mb-0"><i>All Departments</i></p>
-            </div>
+  </section>
+
+  <section>
+    <h2>Members of Staff</h2>
+
+    <section>
+      <h3 class="bg-red-800 text-white p-1 w-fit">[Owner]</h3>
+      <div class="card grid grid-cols-1 lg:grid-cols-4 gap-3">
+        <!-- SilverWolv -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="SilverWolv"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/SilverWolv/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>SilverWolv</span>
+            <span class="text-sm italic">All Departments</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/nixholas/64"/>
-            <div>
-                <h4><b>nixholas</b></h4>
-                <p class="mb-0"><i>DEVCOM</i></p>
-            </div>
+        <!-- Nixholas -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Nixholas"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/nixholas/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Nixholas</span>
+            <span class="text-sm italic">DEVCOM</span>
+          </div>
         </div>
-        <div class="w-full p-6 gap-5 self-start">
-            </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="bg-red-500 text-white p-1 w-fit">[Admin]</h3>
+      <div class="card grid grid-cols-1 lg:grid-cols-4 gap-3">
+        <!-- Carew -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Carew"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/carew/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Carew</span>
+            <span class="text-sm italic">MCFA &amp; DEVCOM</span>
+          </div>
         </div>
-    </div>
-<br>
-    <h4><span class="bg-red-500 text-white p-1">[Admin]</span></h4>
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Carew/64"/>
-            <div>
-                <h4><b>Carew</b></h4>
-                <p class="mb-0"><i>MCFA + DEVCOM</i></p>
-            </div>
+        <!-- Axton -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Axton"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/axton/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Axton</span>
+            <span class="text-sm italic">DEVCOM</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Axton/64"/>
-            <div>
-                <h4><b>Axton</b></h4>
-                <p class="mb-0"><i>DEVCOM</i></p>
-            </div>
+        <!-- Quarxilon -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="quarxilon"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/quarxilon/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>quarxilon</span>
+            <span class="text-sm italic">MIA</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/quarxilon/64"/>
-            <div>
-                <h4><b>quarxilon</b></h4>
-                <p class="mb-0"><i>MIA</i></p>
-            </div>
+        <!-- Jotch -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Jotch"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/jotch/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Jotch</span>
+            <span class="text-sm italic">MCFA</span>
+          </div>
         </div>
-    </div>
-    <hr style="height:5pt; visibility:hidden;" />
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/jotch/64"/>
-            <div>
-                <h4><b>Jotch</b></h4>
-                <p class="mb-0"><i>MCFA</i></p>
-            </div>
+        <!-- Underscore11 -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Underscore11"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/Underscore11/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Underscore11</span>
+            <span class="text-sm italic">DEVCOM</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Underscore11/64"/>
-            <div>
-                <h4><b>Underscore11</b></h4>
-                <p class="mb-0"><i>DEVCOM</i></p>
-            </div>
+        <!-- MatthieuTofu -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="MatthieuTofu"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/MatthieuTofu/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>MatthieuTofu</span>
+            <span class="text-sm italic">CARD &amp; DEVCOM</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/MatthieuTofu/64"/>
-            <div>
-                <h4><b>MatthieuTofu</b></h4>
-                <p class="mb-0"><i>CARD + DEVCOM</i></p>
-            </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="bg-green-300 p-1 w-fit">[Moderator]</h3>
+      <div class="card grid grid-cols-1 lg:grid-cols-4 gap-3">
+        <!-- BargainBinAdmin -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="BargainBinAdmin"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/BargainBinAdmin/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>BargainBinAdmin</span>
+            <span class="text-sm italic">MIA &amp; MIND</span>
+          </div>
         </div>
-    </div>
-    <br>
-    <h4><span class="bg-green-300 p-1">[Mod]</span></h4>
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/BargainBinAdmin/64"/>
-            <div>
-                <h4><b>BargainBinAdmin</b></h4>
-                <p class="mb-0"><i>MIA + MIND</i></p>
-            </div>
+        <!-- Aezo -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Aezo"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/_aezo/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>_aezo</span>
+            <span class="text-sm italic">MCFA</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/_aezo/64"/>
-            <div>
-                <h4><b>_aezo</b></h4>
-                <p class="mb-0"><i>MCFA</i></p>
-            </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="bg-indigo-300 p-1 w-fit">[Helper]</h3>
+      <div class="card grid grid-cols-1 lg:grid-cols-4 gap-3">
+        <!-- VincentLUMCFan -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="VincentLUMCFan"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/VincentLUMCFan/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>VincentLUMCFan</span>
+            <span class="text-sm italic">MIND</span>
+          </div>
         </div>
-        <div class="w-full p-6 flex gap-5 self-start">
+        <!-- GukkyGukz -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="GukkyGukz"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/GukkyGukz/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>GukkyGukz</span>
+            <span class="text-sm italic">MIND</span>
+          </div>
         </div>
-    </div>
-    <br>
-    <h4><span class="bg-indigo-300 p-1">[Helper]</span></h4>
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/VincentLUMCFan/64"/>
-            <div>
-                <h4><b>VincentLUMCFan</b></h4>
-                <p class="mb-0"><i>MIND</i></p>
-            </div>
+        <!-- CM_Raiders -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="CM_Raiders"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/CM_Raiders/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>CM_Raiders</span>
+            <span class="text-sm italic">MIA</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/GukkyGukz/64"/>
-            <div>
-                <h4><b>GukkyGukz</b></h4>
-                <p class="mb-0"><i>MIND</i></p>
-            </div>
+        <!-- Tony515 -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Tony515"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/Tony515/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Tony515</span>
+            <span class="text-sm italic">MIA</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/CM_Raiders/64"/>
-            <div>
-                <h4><b>CM_Raiders</b></h4>
-                <p class="mb-0"><i>MIA</i></p>
-            </div>
+        <!-- PerfectTrains -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="PerfectTrains"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/PerfectTrains/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>PerfectTrains</span>
+            <span class="text-sm italic">MIA</span>
+          </div>
         </div>
-    </div>
-    <hr style="height:5pt; visibility:hidden;" />
-    <div class="flex w-full flex-col lg:flex-row gap-2">
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Tony515/64"/>
-            <div>
-                <h4><b>Tony515</b></h4>
-                <p class="mb-0"><i>MIA</i></p>
-            </div>
+        <!-- Wilhelm59 -->
+        <div class="flex gap-2">
+          <div>
+            <img
+              alt="Wilhelm59"
+              class="max-w-14 self-start"
+              src="https://cravatar.eu/helmavatar/Wilhelm59/64"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span>Wilhelm59</span>
+            <span class="text-sm italic">MCFA</span>
+          </div>
         </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Perfecttrains/64"/>
-            <div>
-                <h4><b>Perfecttrains</b></h4>
-                <p class="mb-0"><i>MIA</i></p>
-            </div>
-        </div>
-        <div class="w-full card flex gap-5 self-start">
-            <img  class="w-1/4 self-start" src="https://cravatar.eu/helmavatar/Wilhelm59/64"/>
-            <div>
-                <h4><b>Wilhelm59</b></h4>
-                <p class="mb-0"><i>MCFA</i></p>
-            </div>
-        </div>
-    </div>
+      </div>
+    </section>
+  </section>
 </BaseLayout>

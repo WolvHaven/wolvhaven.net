@@ -11,7 +11,11 @@ const target = external ? "_blank" : "_self";
     class="inline py-0.5 px-3 border-l-4 text-black border-transparent hover:border-neutral-300 [&.active]:border-main-50 [&.active]:font-bold"
     class:list={[{ active: isActive }]}
   >
-    <span><slot/></span>
-    {external && <span class="text-sm align-middle text-gray-400">&nearrow;</span>}
+    <span><slot /></span>
+    {
+      external && (
+        <span class="text-sm align-middle text-gray-400">&nearrow;</span>
+      )
+    }
   </div>
 </a>
