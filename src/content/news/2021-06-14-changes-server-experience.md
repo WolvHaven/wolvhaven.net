@@ -5,6 +5,8 @@ pubDate: "2021-06-14"
 heroImage: "/common/WH-HouseOfReps.png"
 ---
 
+## We're revamping the server experience
+
 Several major changes to the server rules and experience will be coming. Over the past several months, we have been looking at ways to make the server easier to integrate and settle down in, and have identified some pain points raised by newer members of our community.
 
 **The most commonly mentioned pain points include:**

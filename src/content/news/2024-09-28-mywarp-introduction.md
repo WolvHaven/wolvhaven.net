@@ -5,6 +5,8 @@ pubDate: "2024-09-28"
 heroImage: "/post-content/2024-mywarp.png"
 ---
 
+## A new plugin to create warp signs
+
 Hi WolvHaveners! The long awaited MyWarp plugin has just been implemented! This means players can create their own warps for use on warp signs on the server's creative worlds.
 
 ## How does it work?

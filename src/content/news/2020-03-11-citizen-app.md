@@ -5,6 +5,8 @@ pubDate: "2020-03-11"
 heroImage: "/common/WH-HouseOfReps.png"
 ---
 
+## New PR Rank has been introduced
+
 WolvHaveners voted in favor for the implementation of a new interim rank between the Visitor and Citizen ranks – called “Permanent Resident” (PR) in the January 2020 General Election/Referendum Exercise.
 
 On 16 January 2020, the PR rank was introduced by executive order, mandating that new Visitors who have completed the Immigration Test be promoted to PR instead of Citizen, without any promotions from PR to Citizen until further notice.

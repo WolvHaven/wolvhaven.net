@@ -5,7 +5,12 @@ pubDate: "2024-02-15"
 heroImage: "/post-content/2024-calidia-cleanup-spring.png"
 ---
 
-**Update (15/05/2024)** <br>
+## We are cleaning up abandoned claims
+
+Hello everyone, as some of you may have spotted, the dynmap has some new icons in Calidia. This is part of the upcoming Calidia cleanup.
+
+**Update (15/05/2024)** 
+
 Hello everyone, it has been three months since the clean up was announced. From today, all claims which still have the ⚠️ icon remaining will be moved to the red flag 🚩 category. This means that the claim has been deemed abandoned and is liable to being removed or is up for adoption. Please open a `⁠#helpop` ticket if you are interested in adopting one of these claims. An updated list of claims up for adoption will be posted below and in `⁠#Calidia Spring 2024 Cleanup`.
 
 Thank you to all who have reached out to indicate that they wished to relinquish or keep their claims.
@@ -14,7 +19,7 @@ Thank you to all who have reached out to indicate that they wished to relinquish
 
 <br>
 
-Hello everyone, as some of you may have spotted, the dynmap has some new icons in Calidia. This is part of the upcoming Calidia cleanup.
+
 
 ## Why a cleanup?
 

@@ -5,6 +5,8 @@ pubDate: "2022-04-06"
 heroImage: "/post-content/2021-vision-2023.png"
 ---
 
+## Changes to the Architect and Engineer Rank
+
 With the recent announcement of [Vision 2023](/news/2021-10-27-vision-2023), WolvHaven is transitioning to a creative focused server.
 
 One of the many goals we set out in the plan was to formalize the Builder Rank and make changes to the existing Architect & Engineer rank structure.

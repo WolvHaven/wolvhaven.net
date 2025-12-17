@@ -5,6 +5,8 @@ pubDate: "2021-06-03"
 heroImage: "/post-content/2021-new-wiki-poster-short.png"
 ---
 
+## Moving to a new wiki
+
 We've heard your concerns and frustrations with our wiki being hosted by shoutwiki. Since the server's move to a new machine, we are now able to offer this service in an economical fashion.
 
 You may pre-register now. Accounts will be created around this weekend.

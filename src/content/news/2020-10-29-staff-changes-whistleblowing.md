@@ -5,6 +5,8 @@ pubDate: "2020-10-29"
 heroImage: "/common/WH-HouseOfReps.png"
 ---
 
+## Staff reorganization
+
 As announced earlier in the post about the [upcoming changes to the WolvHaven political system](/news/2020-10-14-political-system-changes), Staff will be reorganized into functional departments/ministries that oversee various areas within the server.
 
 ## What are the new departments?

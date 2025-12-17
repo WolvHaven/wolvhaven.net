@@ -5,6 +5,8 @@ pubDate: "2020-10-14"
 heroImage: "/common/WH-Parliament-Outline.png"
 ---
 
+## Changes to WolvHaven Political System are coming
+
 Since the beginning of the current political system in WolvHaven in 2017, several issues have arisen. Following discussions with members of staff, and after conducting a review, several key changes will be coming to the server’s political system.
 
 ## Why the need for change?
