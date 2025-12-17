@@ -37,6 +37,11 @@
   a {
     @apply text-main-50;
   }
+
+  main a{
+    @apply underline underline-offset-6;
+  }
+  
   a:hover {
     @apply text-main-100;
   }

@@ -60,14 +60,7 @@ const { messages = [] } = Astro.props;
                 href={msg.link}
               >
                 {msg.linkText ?? "More info"}
-                <Icon
-                  class="inline-block -mt-1"
-                  name={
-                    msg.externalLink
-                      ? "fa7-solid:external-link-alt"
-                      : "fa7-solid:arrow-right"
-                  }
-                />
+                <span class="my-auto" set:html={msg.externalLink ? "&#8599;" : "&#8594;"} />
               </a>
             )}
           </p>
@@ -95,14 +88,7 @@ const { messages = [] } = Astro.props;
                 href={messages[0].link}
               >
                 {messages[0].linkText ?? "More info"}
-                <Icon
-                  class="inline-block -mt-1"
-                  name={
-                    messages[0].externalLink
-                      ? "fa7-solid:external-link-alt"
-                      : "fa7-solid:arrow-right"
-                  }
-                />
+                <span class="my-auto" set:html={messages[0].externalLink ? "&#8599;" : "&#8594;"} />
               </a>
             )}
           </p>
