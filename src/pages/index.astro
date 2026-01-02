@@ -1,8 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import Button from "../components/Button.astro";
 import Messages from "../components/Messages.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SEO } from "astro-seo";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (await getCollection("news"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <html lang="en">
@@ -83,14 +89,16 @@ import { SEO } from "astro-seo";
   </section>
 
   <section>
-    <h2>Our offered gamemodes</h2>
-    <div class="flex flex-col lg:flex-row gap-3">
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-5">
+      <div>
+        <h2>Our offered gamemodes</h2>
+        <p>The main gamemode of the server is creative, spread across multiple worlds</p>
+      </div>
+
       <div
-        class="bg-[url('/page-content/home/wh-city-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl"
+        class="bg-[url('/page-content/home/wh-city-card.png')] bg-cover bg-center rounded-lg drop-shadow-2xl"
       >
-        <div
-          class="px-5 py-10 w-full min-h-full bg-black/50 rounded-lg flex flex-col"
-        >
+        <div class="px-5 py-10 min-h-full bg-black/65 rounded-lg flex flex-col">
           <div class="flex-1">
             <h3 class="text-white">WolvHaven City</h3>
             <p class="italic text-white">More to Explore</p>
@@ -104,10 +112,10 @@ import { SEO } from "astro-seo";
       </div>
 
       <div
-        class="bg-[url('/page-content/home/city-build-card.png')] bg-cover bg-center rounded-lg w-full drop-shadow-2xl"
+        class="bg-[url('/page-content/home/city-build-card.png')] bg-cover bg-center rounded-lg drop-shadow-2xl"
       >
         <div
-          class="px-5 py-10 w-full min-h-full bg-black/30 rounded-lg flex flex-col"
+          class="px-5 py-10 min-h-full bg-black/40 rounded-lg flex flex-col"
         >
           <div class="flex-1">
             <h3 class="text-white">Creative City-Build</h3>
@@ -119,6 +127,36 @@ import { SEO } from "astro-seo";
           </div>
           <Button link="/city-build" linkText="Build your city" type="white" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-5">
+      <div>
+        <h2>Latest News</h2>
+        <p>Keep updated with the latest happenings on the WolvHaven Server</p>
+      </div>
+      <div class="col-span-2">
+        <hr />
+        {
+          posts.map((post) => (
+            <a href={`/news/${post.slug}/`} class="text-black hover:text-main-100 no-underline">
+              <div class="flex flex-row justify-between mt-2 mb-2">
+                <div class="my-auto">
+                  <h3 class="text-xl">{post.data.title}</h3>
+                  <p class="text-base mb-0">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </div>
+                <div class="my-auto">
+                  <span>&rarr;</span>
+                </div>
+              </div>
+              <hr />
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
