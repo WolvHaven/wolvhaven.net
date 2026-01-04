@@ -1,0 +1,126 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import type { Page } from "astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection("news")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+
+  // Generate pages
+  return paginate(posts, { pageSize: 5 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props as {
+  page: Page<CollectionEntry<"news">>;
+};
+
+const mdToText = function(markdown) {
+	return markdown.replace(/!\[.*?\]\(.*?\)/g, '')    // remove images
+		.replace(/\[([^\]]+)\]\(.*?\)/g, '$1') 	// links → text
+		.replace(/[#*_>`~\-]/g, '')             // headers, bold/italic, code, bullets
+		.replace(/\n{2,}/g, '\n');              // collapse newlines
+}
+
+const getLinkToPage = function(pageNo){
+  if(pageNo === 1) return `/news`
+  else return `/news/${pageNo}`
+}
+---
+
+<BaseLayout
+  headerImg="/page-content/news/newsroom.png"
+  title="Latest News"
+  subtitle={`${page.total} articles`}
+>
+  <section>
+    <div class="flex flex-col -mt-5">
+      {
+        page.data.map((post) => (
+          <div class="w-full py-5">
+            <div class="flex flex-col lg:flex-row">
+              <div class="w-full lg:w-1/3">
+                <div class="w-full aspect-video">
+                  <a href={`/news/${post.slug}/`}><img alt="Post Header Image" class="w-full h-full object-cover rounded-lg border" src={post.data.heroImage} alt="" /></a>
+                </div>
+              </div>
+              <div class="w-full lg:w-2/3 px-0 lg:px-5 py-5">
+                <a class="text-black no-underline" href={`/news/${post.slug}/`}><h3>{post.data.title}</h3></a>
+                <p><FormattedDate date={post.data.pubDate} /></p>
+                {
+                  post.data.description && <p>{post.data.description}</p>
+                }
+                {
+                  !post.data.description && <p>{`${mdToText(post.body.substring(0, 250))}${post.body.length > 250 ? "..." : ""}`}</p>
+                }
+                <a href={`/news/${post.slug}/`}>Read more &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <hr/>
+        ))
+      }
+	  </div>
+  </section>
+
+  <!-- Pagination -->
+  <section>
+    <div class="w-full justify-center flex gap-2 mx-auto">
+      <!-- Previous Button -->
+      {
+        page.currentPage > 1 && (
+          <a href={getLinkToPage(page.currentPage - 1)} class="rounded-lg border w-12 h-12 flex items-center justify-center no-underline text-black">
+      			  &larr;
+          </a>
+        )
+      }
+      {
+        [...Array(page.lastPage)].map((_, i) => {
+          let pageNo = i+1;
+
+          // Always render current page button
+          if(pageNo == page.currentPage){
+            return (
+              <div class="text-black bg-current/10 rounded-lg border w-12 h-12 flex items-center justify-center">{pageNo}</div>
+            )
+          }
+
+          // Buttons for the next and last 2 pages        
+          if(pageNo > page.currentPage - 2 && pageNo < page.currentPage + 2){
+            return(
+              <a href={getLinkToPage(pageNo)} class="rounded-lg border w-12 h-12 flex items-center justify-center no-underline text-black">
+                {pageNo}
+              </a>
+            )
+          }
+
+          // Always Render First and Last Page Buttons
+          if(pageNo === 1 || pageNo === page.lastPage){
+            return (
+            <a href={getLinkToPage(pageNo)} class="rounded-lg border w-12 h-12 flex items-center justify-center no-underline text-black">
+              {pageNo}
+            </a>
+            )
+          }
+          
+          // Render ... for the 4th one        
+          if(pageNo === page.currentPage - 2 || pageNo === page.currentPage + 2){
+            return(
+              <div class="text-black h-12 flex items-center justify-center">...</div>
+            )
+          }
+          })
+      }
+      <!-- Next Button -->
+      {
+        page.currentPage !== page.lastPage && (
+          <a href={getLinkToPage(page.currentPage + 1)} class="rounded-lg border w-12 h-12 flex items-center justify-center no-underline text-black">
+      			  &rarr;
+          </a>
+        )
+      }
+		</div>
+  </section>
+</BaseLayout> 
