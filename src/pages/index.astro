@@ -69,6 +69,11 @@ const posts = (await getCollection("news"))
     <Messages
       messages={[
         {
+          level: "critical",
+          content:
+            "<b>The server is currently down</b> <i>(Latest Update: 1600UTC - 20/06/26)</i> <br> This is due to a component replacement that was performed on our server infrastructure by our hosting provider. We are currently working with them to resolve this issue. This downtime may last a few days. Thank you for your patience and understanding!",
+        },
+        {
           level: "info",
           content:
             "Latest Video: 02/05/26 | Minecraft Metro: Bonaventure Station — WolvHaven by Metro",

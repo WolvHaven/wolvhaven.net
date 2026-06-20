@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 type message = {
   level: "info" | "warning" | "critical";
-  content: string | HTMLElement;
+  content: string;
   link?: string;
   linkText?: string;
   externalLink?: boolean;
@@ -51,7 +51,7 @@ const { messages = [] } = Astro.props;
         <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
           <Icon name={levelClasses[msg.level].icon} class="text-4xl shrink-0" />
           <p class="text-lg text-wrap">
-            {msg.content}
+            <span set:html={msg.content} />
             <br />
             {msg.link && (
               <a
@@ -79,7 +79,7 @@ const { messages = [] } = Astro.props;
         <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
           <Icon name={levelClasses[messages[0].level].icon} class="text-4xl" />
           <p class="text-lg text-wrap">
-            {messages[0].content}
+            <span set:html={messages[0].content} />
             <br />
             {messages[0].link && (
               <a
