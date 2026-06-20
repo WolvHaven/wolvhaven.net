@@ -45,9 +45,9 @@ const { messages = [] } = Astro.props;
   {
     messages.map((msg) => (
       <div
-        class={`grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[msg.level].bg} ${levelClasses[msg.level].text}`}
+        class={`group grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[msg.level].bg} ${levelClasses[msg.level].text}`}
       >
-        <div class={`min-h-2.5 ${levelClasses[msg.level].stripe}`} />
+        <div class={`min-h-2.5 ${levelClasses[msg.level].stripe} ${msg.level === "critical" || msg.level === "warning" ? "flash" : ""}`} />
         <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
           <Icon name={levelClasses[msg.level].icon} class="text-4xl shrink-0" />
           <p class="text-lg text-wrap">
@@ -73,9 +73,9 @@ const { messages = [] } = Astro.props;
   {
     messages.length > 1 && (
       <div
-        class={`grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[messages[0].level].bg} ${levelClasses[messages[0].level].text}`}
+        class={`group grow-0 shrink-0 w-full snap-center flex flex-col rounded-lg overflow-hidden ${levelClasses[messages[0].level].bg} ${levelClasses[messages[0].level].text}`}
       >
-        <div class={`min-h-2.5 ${levelClasses[messages[0].level].stripe}`} />
+        <div class={`min-h-2.5 ${levelClasses[messages[0].level].stripe} ${messages[0].level === "critical" || messages[0].level === "warning" ? "flash" : ""}`} />
         <div class="flex flex-col lg:flex-row min-h-full p-5 gap-3">
           <Icon name={levelClasses[messages[0].level].icon} class="text-4xl" />
           <p class="text-lg text-wrap">
@@ -239,3 +239,16 @@ const { messages = [] } = Astro.props;
   instantJumpToSlide(slides[0]);
   startAutoScroll();
 </script>
+
+<style>
+  @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  .flash {
+    animation: flash 1.5s ease-in-out infinite;
+  }
+  .group:hover .flash {
+    animation-play-state: paused;
+  }
+</style>
