@@ -2,24 +2,30 @@
 import { Icon } from "astro-icon/components";
 import Button from "../components/Button.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkList from "../components/LinkList.astro";
 ---
 
 <BaseLayout headerImg="/page-content/city-build/odaki.png">
   <div slot="pageHeader">
-    <h1 class="text-white font-bold max-w-fit">Gardellia &amp; Calidia</h1>
-    <p class="text-white">
-      <span class="bg-main-50 p-1">Create to Captivate</span> &mdash; Creative city
-      building worlds made for the seriously creative.
-    </p>
-    <p class="text-white">
-      Let your imagination run and build your city, just the way you like.
-    </p>
-    <div class="flex flex-col lg:flex-row gap-2">
-      <Button
-        link="https://forms.gle/ayx4KPztfdFPk2UXA"
-        linkText="Claim Registration Form"
-        type="white"
-        external
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-10">
+      <div class="col-span-2">
+        <h1 class="text-white font-bold max-w-fit">Gardellia &amp; Calidia</h1>
+        <p class="text-white">
+          <span class="bg-main-50 p-1">Create to Captivate</span> &mdash; Creative
+          city building worlds made for the seriously creative.
+        </p>
+        <p class="text-white">
+          Let your imagination run and build your city, just the way you like.
+        </p>
+      </div>
+      <LinkList
+        links={[
+          {
+            linkText: "Claim Registration Form",
+            link: "https://forms.gle/ayx4KPztfdFPk2UXA",
+            externalLink: true,
+          },
+        ]}
       />
     </div>
   </div>

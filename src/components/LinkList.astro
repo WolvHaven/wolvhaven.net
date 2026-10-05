@@ -1,0 +1,32 @@
+---
+type link = {
+  link?: string;
+  linkText?: string;
+  externalLink?: boolean;
+};
+
+interface Props {
+  links?: link[];
+}
+
+const { links = [] } = Astro.props;
+---
+
+<div>
+  {links.length && (<hr/>)}
+  {
+    links.map((link) => (
+    <a class="text-white no-underline">
+        <div class="flex flex-row hover:bg-current/30 justify-between mt-2 mb-2">
+          <div class="my-auto">
+              <h3 class="text-xl m-0">{link.linkText}</h3>
+          </div>
+          <div class="my-auto">
+                <span set:html={link.externalLink ? "&#8599;" : "&#8594;"} />
+          </div>
+        </div>
+    </a>
+    <hr />
+    ))
+  }
+</div>
